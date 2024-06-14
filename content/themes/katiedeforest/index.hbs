@@ -1,29 +1,20 @@
-{{!< default}}
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="content-area">
-<main class="site-main">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Image Layout</title>
+    <link rel="stylesheet" href="./assets/css/homepage.css">
+</head>
 
-    {{#get "tags" limit="all"}}
-    <div class="tag-feed owl" data-count="{{pagination.total}}">
-
-        {{#foreach tags}}
-        <div class="tag u-placeholder">
-            <img class="tag-image u-object-fit" src="{{#if feature_image}}{{img_url feature_image}}{{else}}{{@site.cover_image}}{{/if}}" alt="{{name}}">
-            <div class="tag-content">
-                <h2 class="tag-name">{{name}}</h2>
-
-                {{#if description}}
-                    <div class="tag-description">
-                        {{description}}
-                    </div>
-                {{/if}}
-            </div>
-            <a class="u-permalink" href="{{url}}"></a>
-        </div>
-        {{/foreach}}
-
+<body>
+    <div class="image-container">
+        <img src="./assets/images/flower.jpg" alt="Image 1">
+        <img src="./assets/images/flower2.jpg" alt="Image 2">
+        <img src="./assets/images/house.JPG" alt="Image 3">
+        {{!-- <img src="image4.jpg" alt="Image 4"> --}}
     </div>
-    {{/get}}
+</body>
 
-</main>
-</div>
+</html>

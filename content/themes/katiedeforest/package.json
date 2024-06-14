@@ -1,5 +1,5 @@
 {
-    "name": "katiedeforest",
+    "name": "katiedeforest.com",
     "description": "A Ghost theme",
     "version": "1.0.0",
     "private": true,
@@ -67,6 +67,30 @@
                 "type": "boolean",
                 "default": true,
                 "group": "post"
+            },
+            "first_homepage_link": {
+                "type": "image",
+                "default": "First image on homepage",
+                "group": "homepage",
+                "description": "Upload image for first coloumn on homepage" 
+            },
+            "second_homepage_link": {
+                "type": "image",
+                "default": "Second image on homepage",
+                "group": "homepage",
+                "description": "Upload image for second coloumn on homepage" 
+            },
+            "third_homepage_link": {
+                "type": "image",
+                "default": "Third image on homepage",
+                "group": "homepage",
+                "description": "Upload image for third coloumn on homepage" 
+            },
+            "fourth_homepage_link": {
+                "type": "image",
+                "default": "Third image on homepage",
+                "group": "homepage",
+                "description": "Upload image for fourth coloumn on homepage" 
             }
         }
     },

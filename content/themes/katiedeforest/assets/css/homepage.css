@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    /* Adjust the gap between images as needed */
+    overflow-x: auto;
+    /* Allows horizontal scrolling if the content overflows */
+}
+
+.image-container img {
+    height: 100vh;
+    /* Full height of the viewport */
+    object-fit: cover;
+    /* Ensures the image covers the full height without stretching */
+    border: 2px solid #ccc;
+    /* Optional: Add a border to the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a shadow to the images */
+}
