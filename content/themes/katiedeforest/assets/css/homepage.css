@@ -42,3 +42,17 @@ body {
     transform: scale(1.1); /* Optional: Adds a slight zoom effect */
     z-index: 1;
 }
+
+.image-text {
+    position: absolute;
+    bottom: 10px; /* Position the text 10px from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; /* White text color for contrast */
+    font-size: 24px; /* Adjust the text size as needed */
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent background for better readability */
+    padding: 5px 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the text background */
+    text-align: center;
+    width: auto; /* Adjust the width of the text container */
+}
