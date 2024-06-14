@@ -16,15 +16,28 @@ body {
     /* Adjust the gap between images as needed */
     overflow-x: auto;
     /* Allows horizontal scrolling if the content overflows */
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 25%; /* Ensure each image takes up 25% of the container */
+    height: 100%;
 }
 
 .image-container img {
-    height: 100vh;
-    /* Full height of the viewport */
+    width: 100%;
+    height: 100%; /* Adjust this value to make images initially smaller */
     object-fit: cover;
-    /* Ensures the image covers the full height without stretching */
-    border: 2px solid #ccc;
-    /* Optional: Add a border to the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Optional: Add a shadow to the images */
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.image-container a:hover img {
+    transform: scale(1.2); /* Optional: Adds a slight zoom effect */
+    z-index: 1;
 }
