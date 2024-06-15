@@ -133,13 +133,46 @@ body {
 .image-text {
     position: absolute;
     bottom: 10px; /* Position the text 10px from the bottom */
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0; /* Initially align text to the left */
     color: white; /* White text color for contrast */
     font-size: 24px; /* Adjust the text size as needed */
-    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent background for better readability */
+    background-color: rgba(0, 0, 0, 0.0); /* Semi-transparent background */
     padding: 5px 10px; /* Padding around the text */
     border-radius: 5px; /* Rounded corners for the text background */
     text-align: center;
     width: auto; /* Adjust the width of the text container */
+    transition: left 0.3s ease; /* Transition for left position */
+}
+
+.image-text:hover {
+    left: 50px; /* Move text slightly to the right on hover */
+}
+
+.image-text::before {
+    content: url('./assets/images/catlogo.png'); /* Replace with path to your logo */
+    display: none; /* Initially hide logo */
+    position: absolute;
+    left: -50px; /* Position logo to the left of text */
+    top: 50%; /* Align logo vertically centered */
+    transform: translateY(-50%);
+    width: 40px; /* Adjust logo size as needed */
+    height: auto;
+    z-index: 1; /* Ensure logo appears above text */
+    transition: opacity 0.3s ease; /* Optional: Transition for logo opacity */
+}
+
+.image-text:hover::before {
+    display: block; /* Show logo on hover */
+    opacity: 0.8; /* Adjust logo opacity */
+}
+
+.hoverlogo {
+    width: 40px; /* Adjust logo size as needed */
+    height: auto;
+    opacity: 0; /* Initially hide logo */
+    transition: opacity 0.3s ease;
+}
+
+.image-overlay:hover .hoverlogo {
+    opacity: 1; /* Show logo on hover */
 }
