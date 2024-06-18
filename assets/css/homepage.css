@@ -76,6 +76,8 @@ body {
     display: flex;
     align-items: center;
     margin-right: 10px; /* Adjust margin as needed */
+    position: relative;
+    z-index: 20;
 }
 
 .hamburger {
@@ -87,6 +89,7 @@ body {
     cursor: pointer;
     pointer-events: auto;
     margin-left: auto;
+    z-index: 20;
 }
 
 .hamburger span {
@@ -94,18 +97,19 @@ body {
     height: 3px;
     background-color: black;
     border-radius: 2px;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;, background-color 0.3s;
 }
 
 .menu {
     display: none;
     position: fixed;
-    top: 60px;
+    top: 0px;
     right: 0;
-    width: 200px;
+    width: 500px;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    z-index: 10;
+    z-index: 5;
     pointer-events: auto;
 }
 
@@ -114,24 +118,29 @@ body {
 }
 
 .menu ul {
+    margin-bottom: 20px;
+    font-size: 20px;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 50px 0 0 0
 }
 
 .menu ul li {
-    border-bottom: 1px solid #444;
+    border-bottom: 0px solid #444;
 }
 
 .menu ul li a {
     display: block;
-    padding: 10px 20px;
+    padding: 20px 20px;
     color: white;
     text-decoration: none;
 }
 
 .menu ul li a:hover {
     background-color: #555;
+}
+
+.hamburger.open span {
+    background-color: rgb(255, 255, 255); /* Color for the "X" */
 }
 
 .hamburger.open span:nth-child(1) {
