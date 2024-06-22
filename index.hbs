@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vertical Image Layout</title>
     <link rel="stylesheet" href="./assets/css/homepage.css">
+    <link rel="stylesheet" href="./assets/css/theme-switch.css">
+    <link rel="stylesheet" href="./assets/css/hamburger.css">
 </head>
 
 <body>
@@ -18,19 +20,20 @@
                 </a>
             </div>
         </div>
-            <div class="hamburger-container">
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+        <div class="hamburger-container">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+        </div>
     </header>
     <nav class="menu" id="menu">
         <div class="switch-container">
-            <button id="invert-colors-button">
-                <span class="darkmodeicon">🌙</span> <!-- Default to moon icon for dark mode -->
-            </button>
+            <div onclick="tdnn()" class="tdnn">
+                <div class="moon">
+                </div>
+            </div>
         </div>
         <ul>
             <li><a href="page1.html">Katie's Photography</a></li>
@@ -71,7 +74,7 @@
             </div>
         </a>
     </div>
-    
+
     <script src="./assets/js/hamburgermenu.js"></script>
 </body>
 

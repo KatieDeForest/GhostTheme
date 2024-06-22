@@ -20,7 +20,7 @@ function toggleInvertColors() {
 }
 
 // Add event listener to toggle invert colors when clicking switch container
-document.querySelector('.switch-container').addEventListener('click', function() {
+document.querySelector('.switch-container').addEventListener('click', function () {
     toggleInvertColors();
 });
 
@@ -30,3 +30,9 @@ document.getElementById('hamburger').addEventListener('click', function () {
     var menu = document.getElementById('menu');
     menu.classList.toggle('open');
 });
+
+function tdnn() {
+    document.getElementsByClassName("moon")[0].classList.toggle("sun");
+    document.getElementsByClassName("tdnn")[0].classList.toggle("day");
+    document.getElementsByTagName("BODY")[0].classList.toggle("light");
+}
