@@ -1,0 +1,108 @@
+.hamburger-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    /* Adjust margin as needed */
+    position: relative;
+    z-index: 20;
+    flex: 0 0 auto;
+    border: 0px solid red;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 20;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+    background-color: 0.3s;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 500px;
+    height: 100%;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+.menu.open {
+    display: block;
+}
+
+.menu ul {
+    display: block;
+    position: relative;
+    margin-bottom: 80px;
+    top: 200px;
+    font-size: 20px;
+    list-style: none;
+    padding: 0px 0 0 0;
+    border: 0px solid red;
+}
+
+.menu ul li {
+    border-bottom: 0px solid #444;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 20px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+}
+
+.menu.invert {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+
+.menu.invert ul li a {
+    color: black;
+}
+
+.menu.invert ul li a:hover {
+    background-color: #ccc;
+}
+
+
+.hamburger.open.invert span {
+    background-color: black;
+}
+
+.hamburger.open span {
+    background-color: rgb(255, 255, 255);
+    /* Color for the "X" */
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
