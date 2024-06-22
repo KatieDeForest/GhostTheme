@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vertical Image Layout</title>
-    <link rel="stylesheet" href="./assets/css/homepage.css">
-    <link rel="stylesheet" href="./assets/css/theme-switch.css">
-    <link rel="stylesheet" href="./assets/css/hamburger.css">
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/homepage.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/theme-switch.css'}}">
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/hamburger.css'}}">
     {{!--
-    <link rel="stylesheet" href="./assets/css/layout.css"> --}}
+    <link rel="stylesheet" href="{{asset " css/layout.css"}}"> --}}
 </head>
 
 <body>
@@ -18,7 +18,7 @@
             <div class="header-content">
                 <div class="logo-container">
                     <a href="https://KatieDeForest.com" class="header-link">
-                        <img src="./assets/images/catlogo.png" alt="Logo" class="logo">
+                        <img src="{{asset 'images/catlogo.png'}}" alt="Logo" class="logo">
                         <h1>Katie De Forest</h1>
                     </a>
                 </div>
@@ -32,8 +32,7 @@
             </div>
             <nav class="menu" id="menu">
                 <div onclick="tdnn()" class="tdnn">
-                    <div class="moon">
-                    </div>
+                    <div class="moon"></div>
                 </div>
                 <ul>
                     <li><a href="page1.html">Katie's Photography</a></li>
@@ -43,11 +42,9 @@
                 </ul>
             </nav>
         </header>
+        <script type="text/javascript" src="{{asset 'js/hamburgermenu.js'}}"></script>
         {{{body}}}
     </div>
-
-
-    <script src="./assets/js/hamburgermenu.js"></script>
 
 </body>
 
