@@ -117,13 +117,33 @@ body {
     display: block;
 }
 
-.menu button#invert-colors-button {
-    top: 50px;
-    display: block;
-    position: fixed;
+#invert-colors-button {
+    position: relative;
+    width: 80px; /* Adjust width as needed */
+    height: 80px; /* Adjust height as needed */
     cursor: pointer;
-    pointer-events: auto;
+    background: gray;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Adjust font size if necessary */
+    color: inherit;
+    transition: transform 0.3s ease; /* Add transition for animation */
 }
+
+#invert-colors-button.animate {
+    transform: translateX(100%); /* Adjust the distance as needed */
+}
+
+#invert-colors-button .darkmodeicon {
+    pointer-events: none; /* Ensure the icon doesn't intercept clicks */
+}
+
+.darkmodeicon {
+    font-size: 24px; /* Adjust font size as needed */
+}
+
 
 .menu ul {
     display: block;
