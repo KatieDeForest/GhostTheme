@@ -4,9 +4,11 @@ function toggleInvertColors() {
     var hamburger = document.querySelector('.hamburger');
     var icon = document.querySelector('#invert-colors-button .darkmodeicon');
     var invertButton = document.getElementById('invert-colors-button');
+    var switchContainer = document.querySelector('.switch-container');
 
     menu.classList.toggle('invert');
     hamburger.classList.toggle('invert');
+    switchContainer.classList.toggle('invert');
 
     if (menu.classList.contains('invert')) {
         icon.textContent = '☀️'; // Sun icon for light mode
@@ -17,8 +19,8 @@ function toggleInvertColors() {
     invertButton.classList.toggle('animate');
 }
 
-// Add event listener to toggle invert colors on button click
-document.getElementById('invert-colors-button').addEventListener('click', function() {
+// Add event listener to toggle invert colors when clicking switch container
+document.querySelector('.switch-container').addEventListener('click', function() {
     toggleInvertColors();
 });
 

@@ -21,15 +21,13 @@ body {
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.0);
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
     pointer-events: none;
     box-sizing: border-box;
-    border: 2px solid red;
+    border: 0px solid red;
 }
 
 .header-content {
@@ -38,7 +36,7 @@ body {
     width: 100%;
     pointer-events: auto;
     justify-content: space-between;
-    border: 2px solid red;
+    border: 0px solid red;
     max-width: 265px;
 }
 
@@ -82,7 +80,7 @@ body {
     position: relative;
     z-index: 20;
     flex: 0 0 auto;
-    border: 2px solid red;
+    border: 0px solid red;
 }
 
 .hamburger {
@@ -121,27 +119,47 @@ body {
     display: block;
 }
 
-#invert-colors-button {
+.switch-container {
+    display: block;
     position: absolute;
-    top: 10px; /* Adjust as needed to position correctly */
-    left: 10px; /* Adjust as needed to position correctly */
-    width: 80px; /* Adjust width as needed */
-    height: 70px; /* Adjust height as needed */
     cursor: pointer;
+    pointer-events: auto;
+    top: 20px; /* Adjust as needed to position correctly */
+    left: 10px; /* Adjust as needed to position correctly */
+    width: 70px; /* Width of the switch background */
+    height: 40px; /* Height of the switch background */
+    border-radius: 30px;
+    background-color: #afafaf;
+    box-shadow: 0 0 5px rgba(111, 111, 111, 0.5); 
+}
+
+.switch-container.invert {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background-color: #444;
+}
+
+.switch-container button#invert-colors-button {
+    position: absolute;
     background: none;
+    cursor: pointer;
     display: flex;
-    align-items: center;
+    width: 10px;
+    height: 20px;
+    left: 5px;
+    Top: 7px;
+    border-radius: 20px;
     justify-content: center;
+    align-items: center;
+    pointer-events: auto;
     font-size: 24px; /* Adjust font size if necessary */
     color: inherit;
     transition: transform 0.5s ease; /* Add transition for animation */
-    border: 2px solid red;
-    box-sizing: border-box;
-    pointer-events: auto;
+    border: 0px solid red;
+    box-sizing: content-box;
 }
 
-#invert-colors-button.animate {
-    transform: translateX(50%); /* Adjust the distance as needed */
+.switch-container button#invert-colors-button.animate {
+    transform: translateX(150%); /* Adjust the distance as needed */
 }
 
 .menu ul {
@@ -152,7 +170,7 @@ body {
     font-size: 20px;
     list-style: none;
     padding: 0px 0 0 0;
-    border: 2px solid red;
+    border: 0px solid red;
 }
 
 .menu ul li {
