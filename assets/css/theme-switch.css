@@ -21,10 +21,12 @@
 .tdnn {
     cursor: pointer;
     margin: 0 auto;
+    top: 15px;
+    left: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     /*change size of toggle with font-size*/
-    font-size: 30%;
-    margin-top: 10em;
-    position: relative;
+    font-size: 18%;
+    position: absolute;
     height: var(--toggleHeight);
     width: var(--toggleWidth);
     border-radius: var(--toggleHeight);

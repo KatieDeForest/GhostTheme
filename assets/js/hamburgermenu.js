@@ -2,25 +2,13 @@
 function toggleInvertColors() {
     var menu = document.querySelector('.menu');
     var hamburger = document.querySelector('.hamburger');
-    var icon = document.querySelector('#invert-colors-button .darkmodeicon');
-    var invertButton = document.getElementById('invert-colors-button');
-    var switchContainer = document.querySelector('.switch-container');
 
     menu.classList.toggle('invert');
     hamburger.classList.toggle('invert');
-    switchContainer.classList.toggle('invert');
-
-    if (menu.classList.contains('invert')) {
-        icon.textContent = '☀️'; // Sun icon for light mode
-    } else {
-        icon.textContent = '🌙'; // Moon icon for dark mode
-    }
-
-    invertButton.classList.toggle('animate');
 }
 
 // Add event listener to toggle invert colors when clicking switch container
-document.querySelector('.switch-container').addEventListener('click', function () {
+document.querySelector('.tdnn').addEventListener('click', function () {
     toggleInvertColors();
 });
 
