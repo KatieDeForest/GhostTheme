@@ -2,9 +2,11 @@
 function toggleInvertColors() {
     var menu = document.querySelector('.menu');
     var hamburger = document.querySelector('.hamburger');
+    var floatingsection = document.querySelector('.floating-section');
 
     menu.classList.toggle('invert');
     hamburger.classList.toggle('invert');
+    floatingsection.classList.toggle('invert');
 }
 
 // Add event listener to toggle invert colors when clicking switch container
@@ -20,7 +22,11 @@ document.getElementById('hamburger').addEventListener('click', function () {
 });
 
 function tdnn() {
-    document.getElementsByClassName("moon")[0].classList.toggle("sun");
-    document.getElementsByClassName("tdnn")[0].classList.toggle("day");
-    document.getElementsByTagName("BODY")[0].classList.toggle("light");
+    var body = document.getElementsByTagName("BODY")[0];
+    var moon = document.getElementsByClassName("moon")[0];
+    var tdnn = document.getElementsByClassName("tdnn")[0];
+
+    moon.classList.toggle("sun");
+    tdnn.classList.toggle("day");
+    body.classList.toggle("light");
 }

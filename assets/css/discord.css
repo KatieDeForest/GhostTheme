@@ -4,36 +4,67 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
     /* Prevent scrolling */
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    /* Optional: Change the background color if needed */
+    margin: 0;
+    padding: 0;
+    display: block;
+    height: 100vh;
+    background: #f0f0f0;
 }
 
-.title-container {
+.floating-section {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px; /* Adjust as needed */
+    height: 1100px;
+    background: rgb(39, 39, 39);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.floating-section.invert {
+    background-color: rgb(255, 255, 255);
+}
+
+.floating-section h1 {
+    position: relative;
+    left: 110px;
+    color: white;
     text-align: left;
-    margin-top: 500px;
 }
 
-.title-container .line {
-    width: 100px;
-    height: 5px;
+.floating-section p {
+    position: relative;
+    top: 110px;
+    color: white;
+    text-align: center;
+}
+
+.floating-section.invert h1 {
+    color: black;
+}
+
+.floating-section.invert p {
+    margin: 10px 0 0;
+    color: black;
+}
+
+.line-left {
+    position: absolute;
+    left: 30px; /* Adjust the left position to move it next to h1 */
+    top: 40px; /* Adjust the vertical positioning */
+    transform: translateY(-50%);
+    width: 60px; /* Adjust the width of the line as needed */
+    height: 5px; /* Adjust the height of the line as needed */
     background-color: white;
-    margin-right: 5px;
     border-radius: 5px;
 }
 
-.title-container span {
-    margin: 0;
-    font-size: 28px;
-    /* Adjust the font size as needed */
-    font-family: 'Arial', sans-serif;
-    overflow: hidden;
-    padding: 5px;
+.floating-section.invert .line-left {
+    background-color: black;
 }
