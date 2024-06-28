@@ -3,10 +3,12 @@ function toggleInvertColors() {
     var menu = document.querySelector('.menu');
     var hamburger = document.querySelector('.hamburger');
     var floatingsection = document.querySelector('.floating-section');
+    var floatinglogo = document.querySelector('.floating-logo');
 
     menu.classList.toggle('invert');
     hamburger.classList.toggle('invert');
     floatingsection.classList.toggle('invert');
+    floatinglogo.classList.toggle('invert');
 }
 
 // Add event listener to toggle invert colors when clicking switch container
