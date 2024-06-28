@@ -42,6 +42,13 @@ body {
     border-radius: 10px;
 }
 
+iframe {
+    position: absolute;
+    top: 250px; /* Adjust as needed */
+    left: 690px; /* Adjust as needed */
+    border: none; /* Remove iframe border */
+}
+
 .heading-1 { 
     /* The Meow Movement */
     position: relative;
