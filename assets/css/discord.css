@@ -39,22 +39,58 @@ body {
     right: 10px; /* Adjust as needed */
     width: 200px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
 }
 
-.floating-section h1 {
+.heading-1 { 
+    /* The Meow Movement */
     position: relative;
-    left: 10%;
+    left: 100px;
     color: white;
     text-align: left;
 }
 
-.floating-section p {
+.heading-2 {
+    /* 🛡️ In our non-judgmental server: */
     position: relative;
-    top: 10%;
-    left: 5%;
+    top: 70px;
+    left: 42px;
+    font-size: 28px;
+    color: white;
+    text-align: left;
+}
+
+.paragraph-1 {
+    position: absolute;
+    top: 30px;
+    left: 80px;
     max-width: 600px;
     color: white;
     text-align: left;
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.paragraph-2 {
+    position: relative;
+    top: 40px;
+    left: 80px;
+    max-width: 600px;
+    color: white;
+    text-align: left;
+    white-space: pre-line;
+    line-height: 1.5;
+}
+
+.paragraph-3 {
+    position: relative;
+    top: 20px;
+    left: 80px;
+    max-width: 600px;
+    color: white;
+    text-align: left;
+    white-space: pre-line;
+    line-height: 1.5;
 }
 
 .floating-section.invert h1 {
