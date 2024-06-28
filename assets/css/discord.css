@@ -73,13 +73,17 @@ body {
 
 .paragraph-2 {
     position: relative;
-    top: 40px;
-    left: 80px;
+    top: 50px;
+    left: 42px;
     max-width: 600px;
     color: white;
     text-align: left;
     white-space: pre-line;
-    line-height: 1.5;
+    line-height: 1.0;
+}
+
+.paragraph-2 li {
+    margin-bottom: 1px; /* Space between bullet points */
 }
 
 .paragraph-3 {
@@ -98,7 +102,10 @@ body {
 }
 
 .floating-section.invert p {
-    margin: 10px 0 0;
+    color: black;
+}
+
+.floating-section.invert ul {
     color: black;
 }
 
