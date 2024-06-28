@@ -33,6 +33,14 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
+.floating-logo {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .floating-section h1 {
     position: relative;
     left: 10%;
@@ -43,8 +51,10 @@ body {
 .floating-section p {
     position: relative;
     top: 10%;
+    left: 5%;
+    max-width: 600px;
     color: white;
-    text-align: center;
+    text-align: left;
 }
 
 .floating-section.invert h1 {
