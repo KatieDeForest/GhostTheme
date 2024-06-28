@@ -22,7 +22,7 @@ body {
     transform: translate(-50%, -50%);
     width: 80vw;
     max-width: 1000px;
-    height: 80vh;
+    height: 90vh;
     max-height: 1000px;
     background: rgb(39, 39, 39);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -37,14 +37,14 @@ body {
     position: absolute;
     top: 10px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
-    width: 200px; /* Adjust size as needed */
+    width: 300px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
 }
 
 iframe {
     position: absolute;
-    top: 250px; /* Adjust as needed */
+    top: 345px; /* Adjust as needed */
     left: 690px; /* Adjust as needed */
     border: none; /* Remove iframe border */
 }
