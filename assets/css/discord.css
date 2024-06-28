@@ -45,7 +45,7 @@ body {
 .heading-1 { 
     /* The Meow Movement */
     position: relative;
-    left: 100px;
+    left: 80px;
     color: white;
     text-align: left;
 }
@@ -54,7 +54,7 @@ body {
     /* 🛡️ In our non-judgmental server: */
     position: relative;
     top: 70px;
-    left: 42px;
+    left: 35px;
     font-size: 28px;
     color: white;
     text-align: left;
@@ -114,7 +114,7 @@ body {
     left: 30px; /* Adjust the left position to move it next to h1 */
     top: 40px; /* Adjust the vertical positioning */
     transform: translateY(-50%);
-    width: 60px; /* Adjust the width of the line as needed */
+    width: 40px; /* Adjust the width of the line as needed */
     height: 5px; /* Adjust the height of the line as needed */
     background-color: white;
     border-radius: 5px;
