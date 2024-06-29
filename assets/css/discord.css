@@ -10,23 +10,30 @@ body {
 body {
     margin: 0;
     padding: 0;
-    display: block;
     height: 100vh;
     background: #f0f0f0;
 }
 
+.floating-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
 .floating-section {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     width: 90vw;
     max-width: 1100px;
     height: 90vh;
-    max-height: 1000px;
+    max-height: 840px;
     background: rgb(39, 39, 39);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .floating-section.invert {
@@ -35,12 +42,13 @@ body {
 
 .floating-logo {
     position: absolute;
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-    width: 300px; /* Adjust size as needed */
+    top: 1.5%;
+    right: 1%;
+    width: 300px;
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
+    filter: none;
 }
 
 .floating-logo:hover {
@@ -55,42 +63,44 @@ body {
     transform: scale(0.95); /* Slight scale down on click */
 }
 
-iframe {
-    position: fixed;
-    top: 345px; /* Adjust as needed */
-    left: 790px; /* Adjust as needed */
+.discord-widget {
+    position: absolute;
+    top: 41.5%;
+    right: 1%;
     border: none; /* Remove iframe border */
     width: 300px;
-    height: 500px;
+    height: 57%;
 }
 
-.heading-1 { 
+.text-container {
+    position: absolute;
+    left: 1%;
+    top: 1%
+}
+
+.heading-1 {
     /* The Meow Movement */
-    position: relative;
-    left: 80px;
-    font-size: 35px;
-    max-width: 500px;
+    margin-top: 1rem; /* Use margin instead of positioning */
+    margin-left: 5rem; /* Use margin instead of positioning */
+    font-size: 2.5rem; /* Responsive font size */
     color: white;
     text-align: left;
 }
 
 .heading-2 {
     /* 🛡️ In our non-judgmental server: */
-    position: relative;
-    top: 90px;
-    left: 35px;
-    max-width: 500px;
-    font-size: 28px;
+    margin-top: 1rem; /* Use margin instead of positioning */
+    margin-left: 2rem; /* Use margin instead of positioning */
+    font-size: 2rem; /* Responsive font size */
     color: white;
     text-align: left;
 }
 
 .paragraph-1 {
-    position: absolute;
-    top: 30px;
-    left: 80px;
-    max-width: 600px;
-    font-size: 18px;
+    margin-top: -2rem; /* Ensure proper spacing */
+    margin-left: 5rem; /* Use margin instead of positioning */
+    font-size: 1.2rem; /* Responsive font size */
+    max-width: 50rem; /* Responsive max-width */
     color: white;
     text-align: left;
     white-space: pre-line;
@@ -98,27 +108,30 @@ iframe {
 }
 
 .paragraph-2 {
-    position: relative;
-    top: 70px;
-    left: 42px;
-    max-width: 600px;
-    font-size: 18px;
+    margin-top: -0.8rem; /* Ensure proper spacing */
+    margin-left: 2.7rem; /* Use margin instead of positioning */
+    font-size: 1.2rem; /* Responsive font size */
+    max-width: 50rem; /* Responsive max-width */
     color: white;
     text-align: left;
     white-space: pre-line;
-    line-height: 1.0;
+    line-height: 0.8;
+}
+
+.paragraph-2 ul {
+    list-style: disc;
+    padding-left: 1em; /* Bullet points */
 }
 
 .paragraph-2 li {
-    margin-bottom: 1px; /* Space between bullet points */
+    margin-bottom: 0.5em; /* Space between bullet points */
 }
 
 .paragraph-3 {
-    position: relative;
-    top: 30px;
-    left: 80px;
-    max-width: 600px;
-    font-size: 18px;
+    margin-top: -2.8rem; /* Ensure proper spacing */
+    margin-left: 5.4rem; /* Use margin instead of positioning */
+    font-size: 1.2rem; /* Responsive font size */
+    max-width: 50rem; /* Responsive max-width */
     color: white;
     text-align: left;
     white-space: pre-line;
@@ -150,4 +163,60 @@ iframe {
 
 .floating-section.invert .line-left {
     background-color: black;
+}
+
+@media (min-width: 1200px) {
+    .floating-section {
+        width: 60%;
+        height: 90vh;
+        max-width: 1200px;
+        max-height: 1000px;
+}
+
+    .discord-widget {
+        width: 300px;
+        height: 57%;
+        top: 41.5%;
+        right: 1%;
+    }
+
+    .floating-logo {
+        width: 200px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .floating-section {
+        width: 60%;
+        height: 90vh;
+        max-width: 1600px;
+        max-height: 1000px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .floating-section {
+        width: 80%;
+        height: 80%;
+        max-width: 1500px;
+        max-height: 1000px;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-section {
+        width: 95vw;
+        height: 95vh;
+    }
+
+    .discord-widget {
+        width: 90%;
+        height: 60%;
+        top: 15%;
+        left: 5%;
+    }
+
+    .floating-logo {
+        width: 150px; /* Smaller logo for smaller screens */
+    }
 }
