@@ -226,16 +226,25 @@ body {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 100%;
+    left: -100%;
     opacity: 0;
     transition: all 1s ease-in-out;
     text-align: center;
 }
 
 .review.active {
-    left: 0;
+    /* Show active review */
+    left: 0%;
     opacity: 1;
+    /* Fade in active review */
 }
+
+.review.hiding {
+    opacity: 0;
+    left: 100%;
+    /* Fade out hiding review */
+}
+
 
 .reviews-container .review p {
     font-size: 1.5rem;
