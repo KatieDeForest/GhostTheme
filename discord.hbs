@@ -5,43 +5,51 @@
         <div class="floating-section">
             <div class="reviews-container">
                 <div class="review">
-                    <span>❝ Ultimate queer safe space ❞</span>
-                    <p>People there are amazing, didn't see any insults ever, everyone is very supportive, the memes are
+                    <span class="span-header">❝ Ultimate queer safe space ❞</span>
+                    <p class="paragraphs">People there are amazing, didn't see any insults ever, everyone is very
+                        supportive, the memes are
                         good, and there is every kind of good person I can imagine. I generally really enjoy spending
-                        time there"</p>
-                    <span>- thegoddessoftechnology</span>
-                    <span>★★★★★</span>
+                        time there</p>
+                    <span class="span-user">- thegoddessoftechnology</span>
+                    <span class="span-stars">★★★★★</span>
                 </div>
                 <div class="review">
-                    <span>❝♡♡♡♡♡❞</span>
-                    <p>We're here, we're queer, and we are a chaotic mess. But it's the very fun type of chaotic mess,
+                    <span class="span-header">❝ ♡♡♡♡♡ ❞</span>
+                    <p class="paragraphs">We're here, we're queer, and we are a chaotic mess. But it's the very fun type
+                        of chaotic mess,
                         don't get me wrong! We try our best to be a safe space and as far as I've seen, am doing
                         anywhere from pretty to really good with that.
                         People here are fun and I have made lots of friends I would not have gotten the opportunity to
                         meet otherwise. You're gonna have a great time here (if you plan on being respectful and stuff,
                         that is).
                         Stay safe and drink water please ♡</p>
-                    <span>- the_lemon_bastard</span>
-                    <span>★★★★★</span>
+                    <span class="span-user">- the_lemon_bastard</span>
+                    <span class="span-stars">★★★★★</span>
                 </div>
                 <div class="review">
-                    <span>test</span>
-                    <p>"A very supportive and inclusive space."</p>
-                    <span>- User3</span>
+                    <span class="span-header">test</span>
+                    <p class="paragraphs">"A very supportive and inclusive space."</p>
+                    <span class="span-user">- User3</span>
+                    <span class="span-stars">★★★★★</span>
                 </div>
                 <div class="review">
-                    <p>"A very supportive and inclusive space."</p>
-                    <span>- User4</span>
+                    <span class="span-header"></span>
+                    <p class="paragraphs">"A very supportive and inclusive space."</p>
+                    <span class="span-user">- User4</span>
+                    <span class="span-stars">★★★★★</span>
                 </div>
                 <div class="review">
-                    <p>"A very supportive and inclusive space."</p>
-                    <span>- User5</span>
+                    <span class="span-header"></span>
+                    <p class="paragraphs">"A very supportive and inclusive space."</p>
+                    <span class="span-user">- User5</span>
+                    <span class="span-stars">★★★★★</span>
                 </div>
-                <div class="review">
-                    <p>"A very supportive and inclusive space."</p>
-                    <span>- User6</span>
-                </div>
-                <!-- Add more reviews as needed -->
+                {{!-- <div class="review">
+                    <span class="span-header">❝❞</span>
+                    <p class="paragraphs">""</p>
+                    <span class="span-user">- </span>
+                    <span class="span-stars"></span>
+                </div> --}}
             </div>
             <a href="https://discord.gg/TheMeowMovement" target="_blank" rel="noopener">
                 <img src="{{asset 'images/tmmlogo.png'}}" alt="Logo" class="floating-logo">
@@ -73,6 +81,19 @@
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
             </iframe>
         </div>
-    </div>
+        <div class="popup-reviews-container">
+            <div class="popup-reviews">
+                <div class="review">
+                    <span class="span-header">❝ Ultimate queer safe space ❞</span>
+                    <p class="paragraphs">People there are amazing, didn't see any insults ever, everyone is very
+                        supportive, the memes are
+                        good, and there is every kind of good person I can imagine. I generally really enjoy spending
+                        time there</p>
+                    <span class="span-user">- thegoddessoftechnology</span>
+                    <span class="span-stars">★★★★★</span>
+                </div>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="{{asset 'js/discordreviews.js'}}"></script>
+        <script type="text/javascript" src="{{asset 'js/discordreviews.js'}}"></script>
+        <script type="text/javascript" src="{{asset 'js/reviewspopup.js'}}"></script>

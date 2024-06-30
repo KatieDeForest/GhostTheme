@@ -197,10 +197,10 @@ body {
 }
 
 .reviews-container {
-    top: 60%;
+    top: 55%;
     left: 5%;
     width: 500px;
-    height: 300px;
+    height: 350px;
     margin: 50px auto;
     overflow: hidden;
     position: absolute;
@@ -209,6 +209,7 @@ body {
     border: 1.5px solid rgb(255, 255, 255);
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 .reviews-container.invert {
@@ -230,6 +231,9 @@ body {
     opacity: 0;
     transition: all 3s ease-in-out;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
 }
 
 .review.active {
@@ -245,9 +249,7 @@ body {
     /* Fade out hiding review */
 }
 
-
 .reviews-container .review p {
-    font-size: 1.5rem;
     color: #ffffff;
 }
 
@@ -256,12 +258,85 @@ body {
 }
 
 .reviews-container .review span {
-    font-size: 1.3rem;
     color: #ffffff;
 }
 
 .reviews-container.invert .review span {
     color: #000000;
+}
+
+.review .span-header {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.review .span-user {
+    font-size: 1.1rem;
+}
+
+.review .span-stars {
+    font-size: 1.1rem;
+    color: yellow;
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 15px yellow;
+}
+
+.review .paragraphs {
+    font-size: 1.2rem;
+}
+
+.popup-reviews-container {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.0); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it appears above other content */
+    overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+}
+
+.popup-reviews {
+    width: 90%;
+    max-width: 300px;
+    background: #272727; /* Adjust to match your design */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 5% auto; /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff; /* Text color */
+}
+
+.popup-reviews .review {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator between reviews */
+}
+
+.popup-reviews .span-header {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.popup-reviews .span-user {
+    font-size: 1.1rem;
+}
+
+.popup-reviews .span-stars {
+    font-size: 1.1rem;
+    color: yellow;
+    text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 15px yellow;
+}
+
+.popup-reviews .paragraphs {
+    font-size: 1rem;
+}
+
+/* Adjust for light mode */
+.popup-reviews.invert {
+    background: #f1f1f1;
+    color: #000000; /* Dark text on light background */
 }
 
 @media (min-width: 1200px) {
