@@ -1,13 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const reviews = document.querySelectorAll('.review');
+    const reviews = Array.from(document.querySelectorAll('.review'));
     const totalReviews = reviews.length;
     let currentIndex = 0;
+    let shuffledIndices = shuffleArray(Array.from({ length: totalReviews }, (_, i) => i));
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
 
     function showReviewSequence() {
-        // Determine the indices for hiding, active, and upcoming reviews
-        const hidingIndex = currentIndex % totalReviews;
-        const activeIndex = (currentIndex + 1) % totalReviews;
-        const upcomingIndex = (currentIndex + 2) % totalReviews;
+        // Determine the indices for hiding, active, and upcoming reviews using shuffled order
+        const hidingIndex = shuffledIndices[currentIndex % totalReviews];
+        const activeIndex = shuffledIndices[(currentIndex + 1) % totalReviews];
+        const upcomingIndex = shuffledIndices[(currentIndex + 2) % totalReviews];
 
         // Remove all classes from reviews
         reviews.forEach(review => {
