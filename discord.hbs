@@ -1,32 +1,53 @@
-{{!< default}} <div class="image-container">
-    <a href="page1.html">
-        <img src="{{asset 'images/flower.jpg'}}" alt="Katie's Photography">
-        <div class="overlay">
-            <div class="line"></div>
-            <span>Katie's Photography</span>
+{{!< default}} <head>
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/discord.css'}}">
+    </head>
+    <div class="floating-wrapper">
+        <div class="floating-section">
+            <div class="reviews-container">
+                <div class="review">
+                    <p>"Amazing community! Highly recommend joining."</p>
+                    <span>- User1</span>
+                </div>
+                <div class="review">
+                    <p>"I've made so many friends here. Love it!"</p>
+                    <span>- User2</span>
+                </div>
+                <div class="review">
+                    <p>"A very supportive and inclusive space."</p>
+                    <span>- User3</span>
+                </div>
+                <!-- Add more reviews as needed -->
+            </div>
+            <a href="https://discord.gg/TheMeowMovement" target="_blank" rel="noopener">
+                <img src="{{asset 'images/tmmlogo.png'}}" alt="Logo" class="floating-logo">
+            </a>
+            <div class="text-container">
+                <span class="line-left"></span>
+                <h1 class="heading-1">The Meow Movement</h1>
+                <p class="paragraph-1">
+                    We're thrilled to have you in our inclusive community.
+                    Here we embrace diversity, offering a safe space for all.
+                    With a silly twist of catnip and yarn! 🌿 🧶
+                </p>
+                <h1 class="heading-2">🛡️ In our non-judgmental server:</h1>
+                <ul class="paragraph-2">
+                    <li>We take pride in fostering an environment free of judgment.</li>
+                    <li>You can be yourself without fear of harassment.</li>
+                    <li>Safe environment with meticulously managed moderation.</li>
+                    <li>Welcoming and vibrant community dedicated to inclusivity.</li>
+                    <li>Share experiences, learn from one another, and grow together.</li>
+                    <li>Connect with like-minded individuals, form meaningful friendships.</li>
+                </ul>
+                <p class="paragraph-3">
+                    Join us in creating a place where everyone's unique story is celebrated
+                    Where acceptance and support are at the core of our community.
+                </p>
+            </div>
+            <iframe src="https://discord.com/widget?id=1092815830678503446&theme=dark" class="discord-widget"
+                allowtransparency="true" frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+            </iframe>
         </div>
-    </a>
-    <a href="page2.html">
-        <img src="{{asset 'images/tmmlogo.png'}}" alt="The Meow Movement">
-        <div class="overlay">
-            <div class="line"></div>
-            <span>The Meow Movement</span>
-        </div>
-    </a>
-    <a href="page3.html">
-        <video src="{{asset 'images/twitch.mp4'}}" autoplay="true" loop="true" muted="true" playsinline="true">
-            <alt="T.TV /KatieDeForest">
-        </video>
-        <div class="overlay">
-            <div class="line"></div>
-            <span>T.TV/KatieDeForest</span>
-        </div>
-    </a>
-    <a href="page4.html">
-        <img src="{{asset 'images/cutecat.jpg'}}" alt="About Katie De Forest">
-        <div class="overlay">
-            <div class="line"></div>
-            <span>About Katie De Forest</span>
-        </div>
-    </a>
     </div>
+
+    <script type="text/javascript" src="{{asset 'js/discordreviews.js'}}"></script>

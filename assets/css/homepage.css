@@ -16,67 +16,6 @@ body {
     /* Optional: Change the background color if needed */
 }
 
-.site-header {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.0);
-    position: fixed;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    pointer-events: none;
-    box-sizing: border-box;
-    border: 0px solid red;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    pointer-events: auto;
-    justify-content: space-between;
-    border: 0px solid red;
-    max-width: 265px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 50px;
-    /* Adjust the logo size as needed */
-    margin-right: 10px;
-    cursor: pointer;
-    pointer-events: auto;
-}
-
-.site-header h1 {
-    color: rgb(0, 0, 0);
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-    cursor: pointer;
-    text-decoration: none;
-    pointer-events: auto;
-    max-width: 188px;
-}
-
-.header-link {
-    text-decoration: none;
-    /* Remove underline */
-    color: inherit;
-    /* Inherit color from parent */
-    cursor: pointer;
-    display: flex;
-    /* Ensure flex layout for the contents */
-    align-items: center;
-    /* Align items centrally */
-    pointer-events: auto;
-}
-
 .image-container {
     display: flex;
     flex-direction: row;

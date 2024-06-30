@@ -18,6 +18,11 @@
     color: var(--lightt);
 }
 
+.dark {
+    background: var(--darkbg);
+    color: var(--darkt);
+}
+
 .tdnn {
     cursor: pointer;
     margin: 0 auto;
