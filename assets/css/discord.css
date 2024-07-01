@@ -359,6 +359,40 @@ body {
     }
 }
 
+@media (min-width: 1366px) {
+    .floating-section {
+        width: 90%;
+        top: 2%;
+        height: 85vh;
+        max-width: 1440px;
+        max-height: 1080px;
+    }
+
+    .discord-widget {
+        width: 312px;
+        height: 70%;
+        right: -18px;
+        margin-top: -40px;
+        scale: 80%;
+    }
+
+    .floating-logo {
+        width: 250px;
+    }
+
+    .text-container {
+        scale: 70%;
+        top: -13%;
+        left: -8%;
+    }
+
+    .reviews-container {
+        top: 45%;
+        left: -3%;
+        scale: 65%;
+    }
+}
+
 @media (min-width: 1600px) {
     .floating-section {
         width: 80%;
