@@ -116,8 +116,6 @@ body {
     /* Use margin instead of positioning */
     font-size: 1.2rem;
     /* Responsive font size */
-    max-width: 50rem;
-    /* Responsive max-width */
     color: white;
     text-align: left;
     white-space: pre-line;
@@ -130,9 +128,6 @@ body {
     margin-left: 2.7rem;
     /* Use margin instead of positioning */
     font-size: 1.2rem;
-    /* Responsive font size */
-    max-width: 50rem;
-    /* Responsive max-width */
     color: white;
     text-align: left;
     white-space: pre-line;
@@ -341,21 +336,36 @@ body {
 
 @media (min-width: 1200px) {
     .floating-section {
-        width: 60%;
-        height: 90vh;
+        width: 85%;
+        top: 4%;
+        height: 85vh;
         max-width: 1200px;
         max-height: 1000px;
     }
 
     .discord-widget {
         width: 300px;
-        height: 57%;
-        /* top: 41.5%;
-        right: 1%; */
+        height: 75%;
+        right: -27px;
+        margin-top: -53px;
+        scale: 75%;
     }
 
     .floating-logo {
-        width: 200px;
+        top: 2%;
+        width: 225px;
+    }
+
+    .text-container {
+        scale: 65%;
+        top: -16%;
+        left: -10%;
+    }
+
+    .reviews-container {
+        top: 43%;
+        left: -4%;
+        scale: 56%;
     }
 }
 
@@ -364,8 +374,8 @@ body {
         width: 90%;
         top: 2%;
         height: 85vh;
-        max-width: 1440px;
-        max-height: 1080px;
+        max-width: 1366px;
+        max-height: 768px;
     }
 
     .discord-widget {
@@ -406,6 +416,7 @@ body {
         width: 320px;
         height: 55%;
         margin-top: 16px;
+        right: 30px;
     }
 
     .floating-logo {
@@ -416,6 +427,12 @@ body {
         scale: 90%;
         top: -2%;
         left: -2%;
+    }
+
+    .reviews-container {
+        top: 55%;
+        left: 5%;
+        scale: 70%;
     }
 }
 
@@ -429,8 +446,10 @@ body {
 
     .discord-widget {
         width: 320px;
-        height: 62%;
-        margin-top: -50px;
+        height: 58%;
+        right: 15px;
+        margin-top: -10px;
+        scale: 100%;
     }
 
     .floating-logo {
@@ -438,27 +457,84 @@ body {
     }
 
     .text-container {
-        scale: 100%;
-        top: 1%;
-        left: 1%;
+        scale: 90%;
+        top: -2%;
+        left: -2%;
+    }
+
+    .reviews-container {
+        top: 52%;
+        left: 2%;
+        scale: 75%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .floating-section {
-        width: 95vw;
-        height: 95vh;
+        width: 80%;
+        height: 80%;
+        top: 4%;
+        max-width: 640px;
+        max-height: 480px;
     }
 
     .discord-widget {
-        width: 90%;
-        height: 60%;
-        top: 15%;
-        left: 5%;
+        width: 300px;
+        height: 110%;
+        right: -70px;
+        margin-top: -100px;
+        scale: 50%;
     }
 
     .floating-logo {
         width: 150px;
-        /* Smaller logo for smaller screens */
+    }
+
+    .text-container {
+        scale: 40%;
+        top: -170px;
+        left: -180px;
+    }
+
+    .reviews-container {
+        top: 20%;
+        left: -22%;
+        scale: 35%;
+    }
+}
+
+@media (max-width: 375px) {
+    .floating-section {
+        width: 90%;
+        height: 80%;
+        top: 6%;
+        max-width: 375px;
+        max-height: 480px;
+    }
+
+    .discord-widget {
+        width: 300px;
+        height: 120%;
+        right: -84px;
+        margin-top: -105px;
+        scale: 40%;
+    }
+
+    .floating-logo {
+        width: 120px;
+        right: 2%;
+    }
+
+    .text-container {
+        scale: 32%;
+        top: -190px;
+        left: -230px;
+        width: 200%;
+    }
+
+    .reviews-container {
+        top: 20%;
+        left: -45%;
+        scale: 30%;
     }
 }
