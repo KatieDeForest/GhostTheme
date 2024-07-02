@@ -1,9 +1,16 @@
 {{!< default}} <head>
     <link rel="stylesheet" type="text/css" href="{{asset 'css/discord.css'}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
     <div class="floating-wrapper">
         <div class="floating-section">
-            <div class="reviews-container" id="reviews-container">
+            <div class="reviews-container" id="reviews-container"></div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="modal-reviews"></div>
+                </div>
             </div>
             <a href="https://discord.gg/TheMeowMovement" target="_blank" rel="noopener">
                 <img src="{{asset 'images/tmmlogo.png'}}" alt="Logo" class="floating-logo">
@@ -35,7 +42,7 @@
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
             </iframe>
         </div>
-        <div class="popup-reviews-container">
+        {{!-- <div class="popup-reviews-container">
             <div class="popup-reviews">
                 <div class="review">
                     <span class="span-header">❝ Ultimate queer safe space ❞</span>
@@ -47,7 +54,8 @@
                     <span class="span-stars">★★★★★</span>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <script type="module" src="{{asset 'js/discordreviews.js'}}"></script>
-        <script type="text/javascript" src="{{asset 'js/reviewspopup.js'}}"></script>
+        {{!--
+        <script type="text/javascript" src="{{asset 'js/reviewspopup.js'}}"></script> --}}

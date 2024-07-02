@@ -2,13 +2,17 @@
 import reviewsData from './reviews.json' with { type: 'json' };
 
 document.addEventListener('DOMContentLoaded', function () {
-    const reviewsContainer = document.querySelector('#reviews-container'); // Make sure to have a container element in your HTML to hold the reviews
+    const reviewsContainer = document.getElementById('reviews-container');
+    const modal = document.getElementById('myModal');
+    const modalContent = document.getElementById('modal-reviews');
+    const span = document.getElementsByClassName('close')[0];
 
     // Function to create review elements from JSON data
     function createReviewElements(reviewsData) {
-        reviewsData.forEach(review => {
+        reviewsData.forEach((review, index) => {
             const reviewElement = document.createElement('div');
             reviewElement.classList.add('review');
+            reviewElement.setAttribute('data-index', index);
 
             const headerElement = document.createElement('span');
             headerElement.classList.add('span-header');
@@ -76,5 +80,50 @@ document.addEventListener('DOMContentLoaded', function () {
     showReviewSequence();
 
     // Set interval to switch reviews every 3 seconds
-    setInterval(showReviewSequence, 5000);
+    setInterval(showReviewSequence, 3000);
+
+    // When the user clicks on a review, open the modal and populate it with all reviews
+    reviewsContainer.addEventListener('click', function () {
+        modalContent.innerHTML = '';
+        reviewsData.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+
+            const headerElement = document.createElement('span');
+            headerElement.classList.add('span-header');
+            headerElement.textContent = review.header;
+
+            const paragraphsElement = document.createElement('p');
+            paragraphsElement.classList.add('paragraphs');
+            paragraphsElement.textContent = review.paragraphs;
+
+            const userElement = document.createElement('span');
+            userElement.classList.add('span-user');
+            userElement.textContent = review.user;
+
+            const starsElement = document.createElement('span');
+            starsElement.classList.add('span-stars');
+            starsElement.textContent = review.stars;
+
+            reviewElement.appendChild(headerElement);
+            reviewElement.appendChild(paragraphsElement);
+            reviewElement.appendChild(userElement);
+            reviewElement.appendChild(starsElement);
+
+            modalContent.appendChild(reviewElement);
+        });
+        modal.style.display = 'block';
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = 'none';
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
 });
