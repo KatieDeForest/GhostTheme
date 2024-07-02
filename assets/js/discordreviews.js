@@ -1,4 +1,44 @@
+// Import reviews from JSON file
+import reviewsData from './reviews.json' with { type: 'json' };
+
 document.addEventListener('DOMContentLoaded', function () {
+    const reviewsContainer = document.querySelector('#reviews-container'); // Make sure to have a container element in your HTML to hold the reviews
+
+    // Function to create review elements from JSON data
+    function createReviewElements(reviewsData) {
+        reviewsData.forEach(review => {
+            const reviewElement = document.createElement('div');
+            reviewElement.classList.add('review');
+
+            const headerElement = document.createElement('span');
+            headerElement.classList.add('span-header');
+            headerElement.textContent = review.header;
+
+            const paragraphsElement = document.createElement('p');
+            paragraphsElement.classList.add('paragraphs');
+            paragraphsElement.textContent = review.paragraphs;
+
+            const userElement = document.createElement('span');
+            userElement.classList.add('span-user');
+            userElement.textContent = review.user;
+
+            const starsElement = document.createElement('span');
+            starsElement.classList.add('span-stars');
+            starsElement.textContent = review.stars;
+
+            reviewElement.appendChild(headerElement);
+            reviewElement.appendChild(paragraphsElement);
+            reviewElement.appendChild(userElement);
+            reviewElement.appendChild(starsElement);
+
+            reviewsContainer.appendChild(reviewElement);
+        });
+    }
+
+    // Create review elements
+    createReviewElements(reviewsData);
+
+    // Get all review elements after they've been added to the DOM
     const reviews = Array.from(document.querySelectorAll('.review'));
     const totalReviews = reviews.length;
     let currentIndex = 0;
@@ -36,5 +76,5 @@ document.addEventListener('DOMContentLoaded', function () {
     showReviewSequence();
 
     // Set interval to switch reviews every 3 seconds
-    setInterval(showReviewSequence, 8000);
+    setInterval(showReviewSequence, 5000);
 });
