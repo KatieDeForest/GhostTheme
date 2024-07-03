@@ -76,6 +76,7 @@ body {
     /* Remove iframe border */
     width: 300px;
     height: 57%;
+    z-index: 200
 }
 
 .text-container {
@@ -334,6 +335,51 @@ body {
     color: #000000; /* Dark text on light background */
 }
 
+.join-server-container {
+    position: absolute;
+    bottom: 641px;
+    right: 200px;
+    z-index: 300
+    /* Adjust position as needed */
+}
+
+.join-server-button {
+    display: inline-block;
+    width: 100px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    background-color: #5991d7;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.join-server-button:hover {
+    background-color: #5991d7;
+    border-image-slice: 1;
+    border-width: 2px;
+    letter-spacing: 1.5px;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-image: radial-gradient(circle at center, #5991d7, #5991d7), radial-gradient(circle at center, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+    animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+    0% { border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082); }
+    14.29% { border-image-source: radial-gradient(circle at center, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee); }
+    28.57% { border-image-source: radial-gradient(circle at center, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000); }
+    42.86% { border-image-source: radial-gradient(circle at center, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500); }
+    57.14% { border-image-source: radial-gradient(circle at center, #008000, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00); }
+    71.43% { border-image-source: radial-gradient(circle at center, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00, #008000); }
+    85.71% { border-image-source: radial-gradient(circle at center, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff); }
+    100% { border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082); }
+}
+
 @media (min-width: 1200px) {
     .floating-section {
         width: 85%;
@@ -469,6 +515,40 @@ body {
     }
 }
 
+@media (min-width: 2500px) {
+    .floating-section {
+        width: 80%;
+        top: 2%;
+        height: 90%;
+        max-width: 2560px;
+        max-height: 1440px;
+    }
+
+    .discord-widget {
+        width: 340px;
+        height: 58%;
+        right: 20px;
+        margin-top: -20px;
+        scale: 100%;
+    }
+
+    .floating-logo {
+        width: 340px;
+    }
+
+    .text-container {
+        scale: 110%;
+        top: 4%;
+        left: 2%;
+    }
+
+    .reviews-container {
+        top: 60%;
+        left: 5%;
+        scale: 100%;
+    }
+}
+
 @media (max-width: 640px) {
     .floating-section {
         width: 80%;
@@ -526,15 +606,51 @@ body {
     }
 
     .text-container {
-        scale: 32%;
-        top: -190px;
-        left: -230px;
+        scale: 36%;
+        top: -180px;
+        left: -220px;
         width: 200%;
     }
 
     .reviews-container {
         top: 20%;
-        left: -45%;
-        scale: 30%;
+        left: -42%;
+        scale: 36%;
+    }
+}
+
+@media (max-width: 430px) {
+    .floating-section {
+        width: 90%;
+        height: 60%;
+        top: 6%;
+        max-width: 430px;
+        max-height: 932px;
+    }
+
+    .discord-widget {
+        width: 300px;
+        height: 120%;
+        right: -84px;
+        margin-top: -150px;
+        scale: 40%;
+    }
+
+    .floating-logo {
+        width: 120px;
+        right: 2%;
+    }
+
+    .text-container {
+        scale: 42%;
+        top: -160px;
+        left: -230px;
+        width: 200%;
+    }
+
+    .reviews-container {
+        top: 30%;
+        left: -30%;
+        scale: 40%;
     }
 }
