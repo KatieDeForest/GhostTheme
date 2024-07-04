@@ -26,9 +26,10 @@ body {
 .floating-section {
     position: relative;
     width: 90vw;
-    max-width: 1100px;
     height: 90vh;
-    max-height: 840px;
+    top: 2%;
+    max-width: 2560px;
+    max-height: 1440px;
     background: rgb(39, 39, 39);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -345,15 +346,15 @@ body {
 
 .join-server-container {
     position: absolute;
-    bottom: 641px;
-    right: 200px;
+    bottom: 620px;
+    right: 175px;
     z-index: 300
 }
 
 .join-server-button {
     display: inline-block;
     width: 100px;
-    padding: 10px 20px;
+    padding: 10px 14px;
     font-size: 1.1rem;
     letter-spacing: 1.5px;
     color: #ffffff;
@@ -410,7 +411,75 @@ body {
     }
 }
 
-@media (min-width: 1200px) {
+/* Modal styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styling for the review inside modal */
+.modal-review {
+    margin-bottom: 20px;
+}
+
+.modal-review .span-header {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.modal-review .paragraphs {
+    margin-top: 10px;
+}
+
+.modal-review .span-user,
+.modal-review .span-stars {
+    display: block;
+    margin-top: 5px;
+}
+
+/* @media (min-width: 1200px) {
     .floating-section {
         width: 85%;
         top: 4%;
@@ -690,72 +759,4 @@ body {
         left: -30%;
         scale: 40%;
     }
-}
-
-/* Modal styles */
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Styling for the review inside modal */
-.modal-review {
-    margin-bottom: 20px;
-}
-
-.modal-review .span-header {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.modal-review .paragraphs {
-    margin-top: 10px;
-}
-
-.modal-review .span-user,
-.modal-review .span-stars {
-    display: block;
-    margin-top: 5px;
-}
+} */
