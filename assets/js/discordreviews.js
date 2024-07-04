@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
     showReviewSequence();
 
     // Set interval to switch reviews every 3 seconds
-    setInterval(showReviewSequence, 3000);
+    setInterval(showReviewSequence, 8000);
 
     // When the user clicks on a review, open the modal and populate it with all reviews
     reviewsContainer.addEventListener('click', function () {

@@ -341,7 +341,6 @@ body {
 .popup-reviews.invert {
     background: #f1f1f1;
     color: #000000;
-    /* Dark text on light background */
 }
 
 .join-server-container {
@@ -349,7 +348,6 @@ body {
     bottom: 641px;
     right: 200px;
     z-index: 300
-        /* Adjust position as needed */
 }
 
 .join-server-button {
@@ -544,6 +542,13 @@ body {
         top: 52%;
         left: 2%;
         scale: 75%;
+    }
+
+    .join-server-container {
+        position: absolute;
+        bottom: 520px;
+        right: 175px;
+        z-index: 300
     }
 }
 
