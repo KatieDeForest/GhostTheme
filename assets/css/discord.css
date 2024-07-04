@@ -349,7 +349,7 @@ body {
     bottom: 641px;
     right: 200px;
     z-index: 300
-    /* Adjust position as needed */
+        /* Adjust position as needed */
 }
 
 .join-server-button {
@@ -379,14 +379,37 @@ body {
 }
 
 @keyframes rainbow {
-    0% { border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082); }
-    14.29% { border-image-source: radial-gradient(circle at center, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee); }
-    28.57% { border-image-source: radial-gradient(circle at center, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000); }
-    42.86% { border-image-source: radial-gradient(circle at center, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500); }
-    57.14% { border-image-source: radial-gradient(circle at center, #008000, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00); }
-    71.43% { border-image-source: radial-gradient(circle at center, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00, #008000); }
-    85.71% { border-image-source: radial-gradient(circle at center, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff); }
-    100% { border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082); }
+    0% {
+        border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082);
+    }
+
+    14.29% {
+        border-image-source: radial-gradient(circle at center, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+    }
+
+    28.57% {
+        border-image-source: radial-gradient(circle at center, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000);
+    }
+
+    42.86% {
+        border-image-source: radial-gradient(circle at center, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500);
+    }
+
+    57.14% {
+        border-image-source: radial-gradient(circle at center, #008000, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00);
+    }
+
+    71.43% {
+        border-image-source: radial-gradient(circle at center, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00, #008000);
+    }
+
+    85.71% {
+        border-image-source: radial-gradient(circle at center, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff);
+    }
+
+    100% {
+        border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082);
+    }
 }
 
 @media (min-width: 1200px) {
@@ -662,20 +685,6 @@ body {
         left: -30%;
         scale: 40%;
     }
-}
-
-.review {
-    display: none;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.review.active {
-    display: block;
-}
-
-.review.hiding {
-    display: none;
 }
 
 /* Modal styles */
