@@ -21,7 +21,7 @@
 }
 
 .hamburger span {
-    display: block;
+    display: relative;
     height: 3px;
     background-color: black;
     border-radius: 2px;

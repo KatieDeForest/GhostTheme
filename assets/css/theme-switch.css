@@ -45,7 +45,7 @@
 
 .moon {
     position: absolute;
-    display: block;
+    display: grid;
     border-radius: 50%;
     transition: all 400ms ease-in-out;
     top: 3em;
