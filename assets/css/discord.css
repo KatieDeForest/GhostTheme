@@ -269,9 +269,7 @@ body {
 }
 
 .popup-reviews-container {
-    display: none;
-    /* Initially hidden */
-    position: fixed;
+    display: grid;
     top: 0;
     left: 0;
     width: 100%;
@@ -333,15 +331,17 @@ body {
 
 .join-server-container {
     grid-area: button;
-    display: fixed;
     grid-column: 2;
     grid-row: 1;
-    margin-top: 32.1rem;
+    display: grid;
+    margin-top: 31.4rem;
     margin-left: 1.0rem;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     z-index: 6;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 130.5px;
+    height: 45px;
 }
 
 .join-server-button {
