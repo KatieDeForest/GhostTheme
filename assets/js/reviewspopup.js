@@ -4,7 +4,7 @@ const reviewContainer = document.querySelector('.reviews-container');
 reviewContainer.addEventListener('click', function() {
     // Show the popup reviews container
     const popupContainer = document.querySelector('.popup-reviews-container');
-    popupContainer.style.display = 'block';
+    popupContainer.style.display = 'flex';
 
     // Copy reviews from original container to popup container
     const reviews = this.querySelectorAll('.review');
