@@ -3,14 +3,14 @@ body {
     padding: 0;
 }
 
-/* .background {
-    background-image: url('{{asset "images/background.png"}}');
+.background {
+    /* background-image: url('{{asset "images/background.png"}}'); */
     background-size: cover;
     background-repeat: repeat;
     width: 100%;
     height: 100%;
     position: absolute;
-} */
+}
 
 .floating-wrapper {
     display: flex;
