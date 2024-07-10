@@ -172,7 +172,7 @@ body {
 .line-left {
     width: 45px;
     height: 5px;
-    margin-left: -1rem;
+    margin-left: -0.8rem;
     background-color: white;
     border-radius: 5px;
     margin-bottom: 1rem;
