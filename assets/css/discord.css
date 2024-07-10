@@ -268,7 +268,6 @@ body {
     font-size: 1.2rem;
 }
 
-
 .join-server-container {
     grid-area: button;
     grid-column: 2;
@@ -294,17 +293,14 @@ body {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    
 }
 
 .join-server-button:hover {
-    background-color: #5991d7;
     border-image-slice: 1;
     border-width: 2px;
     letter-spacing: 1.5px;
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    background-image: radial-gradient(circle at center, #5991d7, #5991d7), radial-gradient(circle at center, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+    background-image: radial-gradient(circle at center, #5992d700, #5992d700);
     animation: rainbow 5s linear infinite;
 }
 
@@ -340,72 +336,4 @@ body {
     100% {
         border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082);
     }
-}
-
-/* Modal styles */
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Styling for the review inside modal */
-.modal-review {
-    margin-bottom: 20px;
-}
-
-.modal-review .span-header {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.modal-review .paragraphs {
-    margin-top: 10px;
-}
-
-.modal-review .span-user,
-.modal-review .span-stars {
-    display: block;
-    margin-top: 5px;
 }
