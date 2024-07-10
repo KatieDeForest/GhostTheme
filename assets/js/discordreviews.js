@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const reviewsContainer = document.getElementById('reviews-container');
 
-    // Fetch reviews from Disboard
-    fetch('https://disboard.org/server/reviews/1092815830678503446')
+    // Fetch reviews from the Nginx Ingress proxy
+    fetch('/reviews')
         .then(response => response.text())
         .then(data => {
             const parser = new DOMParser();
