@@ -112,7 +112,6 @@ body {
     grid-row: 1;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -121,7 +120,7 @@ body {
 .paragraph-1,
 .paragraph-2,
 .paragraph-3 {
-    margin-left: 3%;
+    margin-left: 4%;
     color: white;
     text-align: left;
 }
@@ -129,12 +128,13 @@ body {
 .heading-1 {
     font-size: 2.5rem;
     margin-top: -2.6rem;
+    margin-left: 2.5rem;
 }
 
 .heading-2 {
     font-size: 2rem;
     margin-top: 1rem;
-    margin-left: -1rem;
+    margin-left: -0.8rem;
 }
 
 .paragraph-1,
@@ -145,7 +145,7 @@ body {
 }
 
 .paragraph-2 {
-    margin-left: -0.2rem;
+    margin-left: -0.3rem;
 }
 
 .paragraph-2 ul {
@@ -172,7 +172,7 @@ body {
 .line-left {
     width: 45px;
     height: 5px;
-    margin-left: -1.5rem;
+    margin-left: -1rem;
     background-color: white;
     border-radius: 5px;
     margin-bottom: 1rem;
