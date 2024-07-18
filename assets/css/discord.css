@@ -1,0 +1,339 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger span {
+    background-color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.site-header h1 {
+    text-shadow: 4px 4px 4px rgb(180, 180, 180);
+}
+
+.background {
+    background-image: url('../images/background.png');
+    width: 1000%;
+    height: 1000%;
+}
+
+.floating-wrapper {
+    display: flex;
+    position: absolute;
+    padding: 1rem;
+    flex-direction: column;
+    height: 94vh;
+}
+
+.floating-section {
+    display: grid;
+    grid-template-areas: 
+        "text logo widget button"
+        "reviews reviews";
+    gap: 1rem;
+    margin-top: 4%;
+    width: 80vw;
+    max-width: 150vw;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    background: rgb(39, 39, 39);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow: auto;
+    box-sizing: border-box;
+    flex: 1;
+    padding: 2rem;
+}
+
+.floating-section.invert {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+.floating-logo {
+    display: flex;
+    grid-area: logo;
+    grid-column: 2;
+    grid-row: 1;
+    flex-direction: row;
+    margin-right: 0.5rem;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    filter: none;
+    cursor: pointer;
+    justify-self: end;
+}
+
+.floating-logo img {
+    max-width: 100%;
+    height: auto;
+    z-index: 15;
+}
+
+.floating-logo:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+    /* Glowing effect */
+}
+
+.floating-logo.invert:hover {
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.8);
+    /* Glowing effect */
+}
+
+.floating-logo:active {
+    transform: scale(0.95);
+    /* Slight scale down on click */
+}
+
+.discord-widget {
+    display: flex;
+    grid-area: widget;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    flex-direction: row;
+    border: none;
+    width: 350px;
+    height: 580px;
+    margin-right: 0.5rem;
+    margin-top: 30.5rem;
+    justify-self: end;
+    z-index: 5;
+}
+
+.text-container {
+    grid-area: text;
+    display: flex;
+    max-width: 80%;
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.heading-1,
+.heading-2,
+.paragraph-1,
+.paragraph-2,
+.paragraph-3 {
+    margin-left: 4%;
+    color: white;
+    text-align: left;
+}
+
+.heading-1 {
+    font-size: 2.5rem;
+    margin-top: -2.6rem;
+    margin-left: 2.5rem;
+}
+
+.heading-2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-left: -0.8rem;
+}
+
+.paragraph-1,
+.paragraph-2,
+.paragraph-3 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.paragraph-2 {
+    margin-left: -0.3rem;
+}
+
+.paragraph-2 ul {
+    list-style: disc;
+    padding-left: 1em;
+}
+
+.paragraph-2 li {
+    margin-bottom: 0.5em;
+}
+
+.floating-section.invert h1 {
+    color: black;
+}
+
+.floating-section.invert p {
+    color: black;
+}
+
+.floating-section.invert ul {
+    color: black;
+}
+
+.line-left {
+    width: 45px;
+    height: 5px;
+    margin-left: -0.8rem;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.floating-section.invert .line-left {
+    background-color: black;
+}
+
+.reviews-container {
+    grid-area: reviews;
+    grid-column: 1;
+    grid-row: 2;
+    flex-direction: row;
+    margin-left: 2%;
+    width: 100%;
+    height: 350px;
+    max-width: 500px;
+    overflow: hidden;
+    position: relative;
+    background: rgb(39, 39, 39);
+    border-radius: 10px;
+    border: 1.5px solid rgb(255, 255, 255);
+    box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.reviews-container.invert {
+    background: rgb(241, 241, 241);
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.4);
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    transition: all 3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.review.active {
+    left: 0%;
+    opacity: 1;
+}
+
+.review.hiding {
+    opacity: 0;
+    left: 100%;
+}
+
+.reviews-container .review p {
+    color: #ffffff;
+}
+
+.reviews-container.invert .review p {
+    color: #000000;
+}
+
+.reviews-container .review span {
+    color: #ffffff;
+}
+
+.reviews-container.invert .review span {
+    color: #000000;
+}
+
+.review .span-header {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+.review .span-stars {
+    color: yellow !important;
+    text-shadow: 0 0 5px rgb(219, 207, 39), 0 0 10px rgb(219, 207, 39), 0 0 5px rgb(219, 207, 39);
+}
+
+.review .span-user,
+.review .span-stars {
+    font-size: 1.1rem;
+}
+
+.review .paragraphs {
+    font-size: 1.2rem;
+}
+
+.join-server-container {
+    grid-area: button;
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    margin-top: 31.4rem;
+    margin-left: 1.0rem;
+    z-index: 6;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 130.5px;
+    height: 45px;
+}
+
+.join-server-button {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+    background-color: #5991d7;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+.join-server-button:hover {
+    border-image-slice: 1;
+    border-width: 2px;
+    letter-spacing: 1.5px;
+    background-image: radial-gradient(circle at center, #5992d700, #5992d700);
+    animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082);
+    }
+
+    14.29% {
+        border-image-source: radial-gradient(circle at center, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+    }
+
+    28.57% {
+        border-image-source: radial-gradient(circle at center, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000);
+    }
+
+    42.86% {
+        border-image-source: radial-gradient(circle at center, #ffff00, #008000, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500);
+    }
+
+    57.14% {
+        border-image-source: radial-gradient(circle at center, #008000, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00);
+    }
+
+    71.43% {
+        border-image-source: radial-gradient(circle at center, #0000ff, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00, #008000);
+    }
+
+    85.71% {
+        border-image-source: radial-gradient(circle at center, #4b0082, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff);
+    }
+
+    100% {
+        border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082);
+    }
+}

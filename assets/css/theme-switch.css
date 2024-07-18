@@ -18,6 +18,11 @@
     color: var(--lightt);
 }
 
+.dark {
+    background: var(--darkbg);
+    color: var(--darkt);
+}
+
 .tdnn {
     cursor: pointer;
     margin: 0 auto;
@@ -40,7 +45,7 @@
 
 .moon {
     position: absolute;
-    display: block;
+    display: grid;
     border-radius: 50%;
     transition: all 400ms ease-in-out;
     top: 3em;

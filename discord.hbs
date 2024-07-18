@@ -1,0 +1,45 @@
+{{!< default}} <head>
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/discord.css'}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <div class="background"></div>
+    <div class="floating-wrapper">
+        <div class="floating-section">
+            <img src="{{asset 'images/tmmlogo.png'}}" alt="Logo" class="floating-logo"
+                onclick="window.open('https://discord.gg/TheMeowMovement', '_blank');">
+            <div class="join-server-container">
+                <a href="https://discord.gg/TheMeowMovement" class="join-server-button" target="_blank">Join
+                    Server</a>
+            </div>
+            <div class="reviews-container" id="reviews-container" onclick="window.location.href='https://disboard.org/server/reviews/1092815830678503446';"></div>
+            <div class="text-container">
+                <span class="line-left"></span>
+                <h1 class="heading-1">The Meow Movement</h1>
+                <p class="paragraph-1">
+                    We're thrilled to have you in our inclusive community.<br>
+                    Here we embrace diversity, offering a safe space for all.<br>
+                    With a silly twist of catnip and yarn! 🌿 🧶
+                </p>
+                <h1 class="heading-2">🛡️ In our non-judgmental server:</h1>
+                <ul class="paragraph-2">
+                    <li>We take pride in fostering an environment free of judgment.</li>
+                    <li>You can be yourself without fear of harassment.</li>
+                    <li>Safe environment with meticulously managed moderation.</li>
+                    <li>Welcoming and vibrant community dedicated to inclusivity.</li>
+                    <li>Share experiences, learn from one another, and grow together.</li>
+                    <li>Connect with like-minded individuals, form meaningful friendships.</li>
+                </ul>
+                <p class="paragraph-3">
+                    Join us in creating a place where everyone's unique story is celebrated. <br>
+                    Where acceptance and support are at the core of our community.
+                </p>
+            </div>
+            <iframe src="https://discord.com/widget?id=1092815830678503446&theme=dark" class="discord-widget"
+                allowtransparency="true" frameborder="0"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+            </iframe>
+        </div>
+    </div>
+
+    <script type="module" src="{{asset 'js/discordreviews.js'}}"></script>
