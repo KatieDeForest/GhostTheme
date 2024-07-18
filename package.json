@@ -1,5 +1,5 @@
 {
-    "name": "katiedeforest.com",
+    "name": "katiedeforest",
     "description": "A Ghost theme",
     "version": "1.0.0",
     "private": true,
@@ -40,59 +40,7 @@
                 "width": 1920
             }
         },
-        "card_assets": true,
-        "custom": {
-            "title_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Modern sans-serif"
-            },
-            "body_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Modern sans-serif"
-            },
-            "show_author": {
-                "type": "boolean",
-                "default": true,
-                "group": "post"
-            },
-            "show_related_posts": {
-                "type": "boolean",
-                "default": true,
-                "group": "post"
-            },
-            "first_homepage_link": {
-                "type": "image",
-                "default": "First image on homepage",
-                "group": "homepage",
-                "description": "Upload image for first coloumn on homepage" 
-            },
-            "second_homepage_link": {
-                "type": "image",
-                "default": "Second image on homepage",
-                "group": "homepage",
-                "description": "Upload image for second coloumn on homepage" 
-            },
-            "third_homepage_link": {
-                "type": "image",
-                "default": "Third image on homepage",
-                "group": "homepage",
-                "description": "Upload image for third coloumn on homepage" 
-            },
-            "fourth_homepage_link": {
-                "type": "image",
-                "default": "Fourth image on homepage",
-                "group": "homepage",
-                "description": "Upload image for fourth coloumn on homepage" 
-            }
-        }
+        "card_assets": true
     },
     "scripts": {
         "dev": "gulp",
