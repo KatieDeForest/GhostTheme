@@ -3,6 +3,7 @@
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.0);
     position: fixed;
+    top: 0;
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -36,13 +37,14 @@
 }
 
 .site-header h1 {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 28px;
     font-weight: bold;
     margin: 0;
     cursor: pointer;
     text-decoration: none;
     pointer-events: auto;
+    text-shadow: 4px 4px 4px black;
     max-width: 188px;
 }
 

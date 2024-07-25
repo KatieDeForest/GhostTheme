@@ -1,57 +1,77 @@
-html,
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    /* Prevent scrolling */
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: #f0f0f0;
+.hamburger span {
+    background-color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.site-header h1 {
+    text-shadow: 4px 4px 4px rgb(180, 180, 180);
+}
+
+.background {
+    background-image: url('../images/background.png');
+    width: 1000%;
+    height: 1000%;
 }
 
 .floating-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    position: relative;
+    position: absolute;
+    padding: 1rem;
+    flex-direction: column;
+    height: 94vh;
 }
 
 .floating-section {
-    position: relative;
-    width: 90vw;
-    height: 90vh;
-    top: 2%;
-    max-width: 2560px;
-    max-height: 1440px;
+    display: grid;
+    grid-template-areas: 
+        "text logo widget button"
+        "reviews reviews";
+    gap: 1rem;
+    margin-top: 4%;
+    width: 80vw;
+    max-width: 150vw;
+    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
     background: rgb(39, 39, 39);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     border-radius: 10px;
-    overflow: hidden;
+    overflow: auto;
     box-sizing: border-box;
+    flex: 1;
+    padding: 2rem;
 }
 
 .floating-section.invert {
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
 .floating-logo {
-    position: absolute;
-    top: 1.5%;
-    right: 1%;
-    width: 300px;
+    display: flex;
+    grid-area: logo;
+    grid-column: 2;
+    grid-row: 1;
+    flex-direction: row;
+    margin-right: 0.5rem;
+    max-width: 350px;
     height: auto;
-    /* Maintain aspect ratio */
     border-radius: 10px;
     transition: box-shadow 0.3s ease;
-    /* Smooth transition for the glow effect */
     filter: none;
+    cursor: pointer;
+    justify-self: end;
+}
+
+.floating-logo img {
+    max-width: 100%;
+    height: auto;
+    z-index: 15;
 }
 
 .floating-logo:hover {
@@ -70,96 +90,71 @@ body {
 }
 
 .discord-widget {
-    position: absolute;
-    top: 41.5%;
-    right: 1%;
+    display: flex;
+    grid-area: widget;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    flex-direction: row;
     border: none;
-    /* Remove iframe border */
-    width: 300px;
-    height: 57%;
-    z-index: 200
+    width: 350px;
+    height: 580px;
+    margin-right: 0.5rem;
+    margin-top: 30.5rem;
+    justify-self: end;
+    z-index: 5;
 }
 
 .text-container {
-    position: absolute;
-    left: 1%;
-    top: 1%;
-    scale: 100%;
+    grid-area: text;
+    display: flex;
+    max-width: 80%;
+    grid-column: 1;
+    grid-row: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.heading-1,
+.heading-2,
+.paragraph-1,
+.paragraph-2,
+.paragraph-3 {
+    margin-left: 4%;
+    color: white;
+    text-align: left;
 }
 
 .heading-1 {
-    /* The Meow Movement */
-    margin-top: 1rem;
-    /* Use margin instead of positioning */
-    margin-left: 5rem;
-    /* Use margin instead of positioning */
     font-size: 2.5rem;
-    /* Responsive font size */
-    color: white;
-    text-align: left;
+    margin-top: -2.6rem;
+    margin-left: 2.5rem;
 }
 
 .heading-2 {
-    /* 🛡️ In our non-judgmental server: */
-    margin-top: 1rem;
-    /* Use margin instead of positioning */
-    margin-left: 2rem;
-    /* Use margin instead of positioning */
     font-size: 2rem;
-    /* Responsive font size */
-    color: white;
-    text-align: left;
+    margin-top: 1rem;
+    margin-left: -0.8rem;
 }
 
-.paragraph-1 {
-    margin-top: -2rem;
-    /* Ensure proper spacing */
-    margin-left: 5rem;
-    /* Use margin instead of positioning */
+.paragraph-1,
+.paragraph-2,
+.paragraph-3 {
     font-size: 1.2rem;
-    /* Responsive font size */
-    color: white;
-    text-align: left;
-    white-space: pre-line;
     line-height: 1.5;
 }
 
 .paragraph-2 {
-    margin-top: -0.8rem;
-    /* Ensure proper spacing */
-    margin-left: 2.7rem;
-    /* Use margin instead of positioning */
-    font-size: 1.2rem;
-    color: white;
-    text-align: left;
-    white-space: pre-line;
-    line-height: 0.8;
+    margin-left: -0.3rem;
 }
 
 .paragraph-2 ul {
     list-style: disc;
     padding-left: 1em;
-    /* Bullet points */
 }
 
 .paragraph-2 li {
     margin-bottom: 0.5em;
-    /* Space between bullet points */
-}
-
-.paragraph-3 {
-    margin-top: -2.8rem;
-    /* Ensure proper spacing */
-    margin-left: 5.4rem;
-    /* Use margin instead of positioning */
-    font-size: 1.2rem;
-    /* Responsive font size */
-    max-width: 50rem;
-    /* Responsive max-width */
-    color: white;
-    text-align: left;
-    white-space: pre-line;
-    line-height: 1.5;
 }
 
 .floating-section.invert h1 {
@@ -175,18 +170,12 @@ body {
 }
 
 .line-left {
-    position: absolute;
-    left: 30px;
-    /* Adjust the left position to move it next to h1 */
-    top: 40px;
-    /* Adjust the vertical positioning */
-    transform: translateY(-50%);
-    width: 40px;
-    /* Adjust the width of the line as needed */
+    width: 45px;
     height: 5px;
-    /* Adjust the height of the line as needed */
+    margin-left: -0.8rem;
     background-color: white;
     border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 .floating-section.invert .line-left {
@@ -194,17 +183,19 @@ body {
 }
 
 .reviews-container {
-    top: 55%;
-    left: 5%;
-    width: 500px;
+    grid-area: reviews;
+    grid-column: 1;
+    grid-row: 2;
+    flex-direction: row;
+    margin-left: 2%;
+    width: 100%;
     height: 350px;
-    margin: 50px auto;
+    max-width: 500px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     background: rgb(39, 39, 39);
     border-radius: 10px;
     border: 1.5px solid rgb(255, 255, 255);
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
     box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.2);
     cursor: pointer;
 }
@@ -228,22 +219,18 @@ body {
     opacity: 0;
     transition: all 3s ease-in-out;
     text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     box-sizing: border-box;
 }
 
 .review.active {
-    /* Show active review */
     left: 0%;
     opacity: 1;
-    /* Fade in active review */
 }
 
 .review.hiding {
     opacity: 0;
     left: 100%;
-    /* Fade out hiding review */
 }
 
 .reviews-container .review p {
@@ -267,94 +254,37 @@ body {
     font-weight: bolder;
 }
 
-.review .span-user {
-    font-size: 1.1rem;
+.review .span-stars {
+    color: yellow !important;
+    text-shadow: 0 0 5px rgb(219, 207, 39), 0 0 10px rgb(219, 207, 39), 0 0 5px rgb(219, 207, 39);
 }
 
+.review .span-user,
 .review .span-stars {
     font-size: 1.1rem;
-    color: yellow;
-    text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 15px yellow;
 }
 
 .review .paragraphs {
     font-size: 1.2rem;
 }
 
-.popup-reviews-container {
-    display: none;
-    /* Initially hidden */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.0);
-    /* Semi-transparent background */
-    z-index: 1000;
-    /* Ensure it appears above other content */
-    overflow-y: auto;
-    /* Allow scrolling if content exceeds viewport */
-}
-
-.popup-reviews {
-    width: 90%;
-    max-width: 300px;
-    background: #272727;
-    /* Adjust to match your design */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 5% auto;
-    /* Adjust as needed */
-    padding: 20px;
-    box-sizing: border-box;
-    color: #ffffff;
-    /* Text color */
-}
-
-.popup-reviews .review {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    /* Separator between reviews */
-}
-
-.popup-reviews .span-header {
-    font-size: 1.3rem;
-    font-weight: bold;
-}
-
-.popup-reviews .span-user {
-    font-size: 1.1rem;
-}
-
-.popup-reviews .span-stars {
-    font-size: 1.1rem;
-    color: yellow;
-    text-shadow: 0 0 5px yellow, 0 0 10px yellow, 0 0 15px yellow;
-}
-
-.popup-reviews .paragraphs {
-    font-size: 1rem;
-}
-
-/* Adjust for light mode */
-.popup-reviews.invert {
-    background: #f1f1f1;
-    color: #000000;
-}
-
 .join-server-container {
-    position: absolute;
-    bottom: 620px;
-    right: 175px;
-    z-index: 300
+    grid-area: button;
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    margin-top: 31.4rem;
+    margin-left: 1.0rem;
+    z-index: 6;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 130.5px;
+    height: 45px;
 }
 
 .join-server-button {
-    display: inline-block;
-    width: 100px;
-    padding: 10px 14px;
+    padding: 10px 15px;
     font-size: 1.1rem;
     letter-spacing: 1.5px;
     color: #ffffff;
@@ -363,17 +293,14 @@ body {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+    
 }
 
 .join-server-button:hover {
-    background-color: #5991d7;
     border-image-slice: 1;
     border-width: 2px;
     letter-spacing: 1.5px;
-    background-origin: border-box;
-    background-clip: padding-box, border-box;
-    background-image: radial-gradient(circle at center, #5991d7, #5991d7), radial-gradient(circle at center, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082, #ee82ee);
+    background-image: radial-gradient(circle at center, #5992d700, #5992d700);
     animation: rainbow 5s linear infinite;
 }
 
@@ -410,353 +337,3 @@ body {
         border-image-source: radial-gradient(circle at center, #ee82ee, #ff0000, #ffa500, #ffff00, #008000, #0000ff, #4b0082);
     }
 }
-
-/* Modal styles */
-.modal {
-    display: none;
-    /* Hidden by default */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    padding-top: 100px;
-    /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0);
-    /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Styling for the review inside modal */
-.modal-review {
-    margin-bottom: 20px;
-}
-
-.modal-review .span-header {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.modal-review .paragraphs {
-    margin-top: 10px;
-}
-
-.modal-review .span-user,
-.modal-review .span-stars {
-    display: block;
-    margin-top: 5px;
-}
-
-/* @media (min-width: 1200px) {
-    .floating-section {
-        width: 85%;
-        top: 4%;
-        height: 85vh;
-        max-width: 1200px;
-        max-height: 1000px;
-    }
-
-    .discord-widget {
-        width: 300px;
-        height: 75%;
-        right: -27px;
-        margin-top: -53px;
-        scale: 75%;
-    }
-
-    .floating-logo {
-        top: 2%;
-        width: 225px;
-    }
-
-    .text-container {
-        scale: 65%;
-        top: -16%;
-        left: -10%;
-    }
-
-    .reviews-container {
-        top: 43%;
-        left: -4%;
-        scale: 56%;
-    }
-}
-
-@media (min-width: 1366px) {
-    .floating-section {
-        width: 90%;
-        top: 2%;
-        height: 85vh;
-        max-width: 1366px;
-        max-height: 768px;
-    }
-
-    .discord-widget {
-        width: 312px;
-        height: 70%;
-        right: -18px;
-        margin-top: -40px;
-        scale: 80%;
-    }
-
-    .floating-logo {
-        width: 250px;
-    }
-
-    .text-container {
-        scale: 70%;
-        top: -13%;
-        left: -8%;
-    }
-
-    .reviews-container {
-        top: 45%;
-        left: -3%;
-        scale: 65%;
-    }
-}
-
-@media (min-width: 1600px) {
-    .floating-section {
-        width: 80%;
-        top: 2%;
-        height: 88vh;
-        max-width: 1600px;
-        max-height: 900px;
-    }
-
-    .discord-widget {
-        width: 320px;
-        height: 55%;
-        margin-top: 16px;
-        right: 30px;
-    }
-
-    .floating-logo {
-        width: 320px;
-    }
-
-    .text-container {
-        scale: 90%;
-        top: -2%;
-        left: -2%;
-    }
-
-    .reviews-container {
-        top: 55%;
-        left: 5%;
-        scale: 70%;
-    }
-}
-
-@media (min-width: 1920px) {
-    .floating-section {
-        width: 80%;
-        height: 90%;
-        max-width: 1920px;
-        max-height: 1080px;
-    }
-
-    .discord-widget {
-        width: 320px;
-        height: 58%;
-        right: 15px;
-        margin-top: -10px;
-        scale: 100%;
-    }
-
-    .floating-logo {
-        width: 320px;
-    }
-
-    .text-container {
-        scale: 90%;
-        top: -2%;
-        left: -2%;
-    }
-
-    .reviews-container {
-        top: 52%;
-        left: 2%;
-        scale: 75%;
-    }
-
-    .join-server-container {
-        position: absolute;
-        bottom: 520px;
-        right: 175px;
-        z-index: 300
-    }
-}
-
-@media (min-width: 2500px) {
-    .floating-section {
-        width: 80%;
-        top: 2%;
-        height: 90%;
-        max-width: 2560px;
-        max-height: 1440px;
-    }
-
-    .discord-widget {
-        width: 340px;
-        height: 58%;
-        right: 20px;
-        margin-top: -20px;
-        scale: 100%;
-    }
-
-    .floating-logo {
-        width: 340px;
-    }
-
-    .text-container {
-        scale: 110%;
-        top: 4%;
-        left: 2%;
-    }
-
-    .reviews-container {
-        top: 60%;
-        left: 5%;
-        scale: 100%;
-    }
-}
-
-@media (max-width: 640px) {
-    .floating-section {
-        width: 80%;
-        height: 80%;
-        top: 4%;
-        max-width: 640px;
-        max-height: 480px;
-    }
-
-    .discord-widget {
-        width: 300px;
-        height: 110%;
-        right: -70px;
-        margin-top: -100px;
-        scale: 50%;
-    }
-
-    .floating-logo {
-        width: 150px;
-    }
-
-    .text-container {
-        scale: 40%;
-        top: -170px;
-        left: -180px;
-    }
-
-    .reviews-container {
-        top: 20%;
-        left: -22%;
-        scale: 35%;
-    }
-}
-
-@media (max-width: 375px) {
-    .floating-section {
-        width: 90%;
-        height: 80%;
-        top: 6%;
-        max-width: 375px;
-        max-height: 480px;
-    }
-
-    .discord-widget {
-        width: 300px;
-        height: 120%;
-        right: -84px;
-        margin-top: -130px;
-        scale: 40%;
-    }
-
-    .floating-logo {
-        width: 120px;
-        right: 2%;
-    }
-
-    .text-container {
-        scale: 36%;
-        top: -180px;
-        left: -220px;
-        width: 200%;
-    }
-
-    .reviews-container {
-        top: 20%;
-        left: -42%;
-        scale: 36%;
-    }
-}
-
-@media (max-width: 430px) {
-    .floating-section {
-        width: 90%;
-        height: 60%;
-        top: 6%;
-        max-width: 430px;
-        max-height: 932px;
-    }
-
-    .discord-widget {
-        width: 300px;
-        height: 120%;
-        right: -84px;
-        margin-top: -150px;
-        scale: 40%;
-    }
-
-    .floating-logo {
-        width: 120px;
-        right: 2%;
-    }
-
-    .text-container {
-        scale: 42%;
-        top: -160px;
-        left: -230px;
-        width: 200%;
-    }
-
-    .reviews-container {
-        top: 30%;
-        left: -30%;
-        scale: 40%;
-    }
-} */

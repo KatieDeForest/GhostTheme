@@ -3,27 +3,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
+    <div class="background"></div>
     <div class="floating-wrapper">
         <div class="floating-section">
+            <img src="{{asset 'images/tmmlogo.png'}}" alt="Logo" class="floating-logo"
+                onclick="window.open('https://discord.gg/TheMeowMovement', '_blank');">
             <div class="join-server-container">
-                <a href="https://discord.gg/TheMeowMovement" class="join-server-button" target="_blank">Join Server</a>
+                <a href="https://discord.gg/TheMeowMovement" class="join-server-button" target="_blank">Join
+                    Server</a>
             </div>
-            <div class="reviews-container" id="reviews-container"></div>
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div id="modal-reviews"></div>
-                </div>
-            </div>
-            <a href="https://discord.gg/TheMeowMovement" target="_blank" rel="noopener">
-                <img src="{{asset 'images/tmmlogo.png'}}" alt="Logo" class="floating-logo">
-            </a>
+            <div class="reviews-container" id="reviews-container" onclick="window.location.href='https://disboard.org/server/reviews/1092815830678503446';"></div>
             <div class="text-container">
                 <span class="line-left"></span>
                 <h1 class="heading-1">The Meow Movement</h1>
                 <p class="paragraph-1">
-                    We're thrilled to have you in our inclusive community.
-                    Here we embrace diversity, offering a safe space for all.
+                    We're thrilled to have you in our inclusive community.<br>
+                    Here we embrace diversity, offering a safe space for all.<br>
                     With a silly twist of catnip and yarn! 🌿 🧶
                 </p>
                 <h1 class="heading-2">🛡️ In our non-judgmental server:</h1>
@@ -36,7 +31,7 @@
                     <li>Connect with like-minded individuals, form meaningful friendships.</li>
                 </ul>
                 <p class="paragraph-3">
-                    Join us in creating a place where everyone's unique story is celebrated
+                    Join us in creating a place where everyone's unique story is celebrated. <br>
                     Where acceptance and support are at the core of our community.
                 </p>
             </div>
@@ -45,5 +40,6 @@
                 sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
             </iframe>
         </div>
-        
-        <script type="module" src="{{asset 'js/discordreviews.js'}}"></script>
+    </div>
+
+    <script type="module" src="{{asset 'js/discordreviews.js'}}"></script>
