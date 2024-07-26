@@ -1,11 +1,9 @@
-html,
-body {
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* Prevent scrolling */
 }
 
 body {
@@ -13,7 +11,6 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #000;
-    /* Optional: Change the background color if needed */
 }
 
 .image-container {
@@ -21,18 +18,15 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 0;
-    /* Remove any gaps between images */
     width: 100%;
     height: 100%;
     overflow: hidden;
-    /* Prevent scrolling */
 }
 
 .image-container a {
     position: relative;
     display: inline-block;
     width: 25%;
-    /* Ensure each image takes up 25% of the container */
     height: 100%;
     overflow: hidden;
 }
@@ -46,51 +40,32 @@ body {
     height: 100%;
     background-color: black;
     z-index: 2;
-    /* Ensure the line is above the image */
 }
 
 .image-container a:first-child::before {
     display: none;
-    /* Hide the line for the first image */
 }
 
-.image-container video {
+.image-container video, .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
     z-index: 1;
-    /* Ensure the video is below the line */
 }
 
-.image-container a:hover video {
+.image-container a:hover video, .image-container a:hover img:not(.line) {
     transform: scale(1.1);
-    z-index: 1;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    filter: none;
-    /* Ensure no filters are applied */
-}
-
-.image-container a:hover img:not(.line) {
-    transform: scale(1.1);
-    /* Optional: Adds a slight zoom effect */
     z-index: 1;
 }
 
 .overlay {
     position: absolute;
     bottom: 100px;
-    /* Adjust the position as needed */
     left: 30px;
     display: flex;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
     font-weight: bold;
@@ -108,16 +83,13 @@ body {
 .overlay span {
     margin: 0;
     font-size: 28px;
-    /* Adjust the font size as needed */
     font-family: 'Arial', sans-serif;
     text-shadow: 1px 1px 0px #5e5e5e, -1px -1px 0px #5e5e5e, -1px 1px 0px #5e5e5e, 1px -1px 0px #5e5e5e;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
-    overflow: hidden;
     padding: 5px;
 }
 
 .image-container a:hover .line {
     width: 60px;
-    /* Adjust the width of the line on hover */
 }
