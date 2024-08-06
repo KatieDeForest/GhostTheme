@@ -20,22 +20,99 @@ body {
     text-shadow: 4px 4px 4px rgb(180, 180, 180);
 }
 
+@font-face {
+    font-family: 'FLOWER';
+    src: url('/assets/fonts/FLOWER.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Softers';
+    src: url('/assets/fonts/Softers.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .image-container {
-    display: relative;
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; 
     overflow: hidden;
     z-index: 5;
 }
 
-.overlay {
+.image-container img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.header-overlay, .description-overlay {
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
-    font-weight: bold;
     z-index: 10;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center; 
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.header-overlay {
+    font-size: 140px;
+    top: 12%;
+    max-width: 90%;
+    color: #d6ffc8;
+    letter-spacing: 18px;
+    font-family: 'FLOWER', sans-serif;
+}
+
+.description-overlay {
+    font-size: 35px;
+    top: 30%;
+    max-width: 90%;
+    font-family: 'Softers', sans-serif;
+}
+
+.button-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 60px; 
+    z-index: 10;
+}
+
+.button {
+    padding: 10px 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #474747;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.button::before {
+    content: none;
+    display: none;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
 }
