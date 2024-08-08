@@ -3,14 +3,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
-    <div class="image-container">
-        <img src="{{asset 'images/photohomepage.jpg'}}" loading="lazy">
-        <div class="header-overlay">Katie De Forest</div>
-        <div class="description-overlay">Detail-focused photography<br>that brings out the beauty in every moment</div>
-    </div>
-    <div class="button-container" id="button-container">
-        <a href="#" class="portfolio-button" id="portfolio-button">Portfolio</a>
-        <a href="#" class="aboutme-button" id="aboutme-button">About Me</a>
+   <div class="image-container">
+    <div class="description-overlay">Detail-focused photography<br>that brings out the beauty in every moment</div>
+        <div class="slides">
+            <div class="slide active">
+                <img src="{{asset 'images/image1.jpg'}}" loading="lazy" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="{{asset 'images/image2.jpg'}}" loading="lazy" alt="Slide 2">
+            </div>
+            {{!-- <div class="slide">
+                <img src="{{asset 'images/image3.jpg'}}" loading="lazy" alt="Slide 3">
+            </div> --}}
+        </div>
+        <div class="slider-nav">
+            <span class="nav-line active" data-slide="0"></span>
+            <span class="nav-line" data-slide="1"></span>
+            <span class="nav-line" data-slide="2"></span>
+        </div>
+        <div class="text-block"></div>
     </div>
 
-    <script type="module" src="{{asset 'js/buttonclick.js'}}"></script>
+    <script type="module" src="{{asset 'js/slider.js'}}"></script>

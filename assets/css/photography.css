@@ -23,37 +23,13 @@ body {
 }
 
 @font-face {
-    font-family: 'FLOWER';
-    src: url('/assets/fonts/FLOWER.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-@font-face {
     font-family: 'Softers';
     src: url('/assets/fonts/Softers.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
 
-.image-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    overflow: hidden;
-    z-index: 5;
-}
-
-.image-container img {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
-
-.header-overlay, .description-overlay {
+  .description-overlay {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -66,63 +42,69 @@ body {
     overflow: hidden;
     text-align: center; 
     text-shadow: 0 0 5px rgb(0, 0, 0);
-}
-
-.header-overlay {
-    font-size: 140px;
-    top: 12%;
-    max-width: 90%;
-    color: #d6ffc8;
-    letter-spacing: 18px;
-    font-family: 'FLOWER', sans-serif;
-}
-
-.description-overlay {
     font-size: 35px;
     top: 30%;
     max-width: 90%;
     font-family: 'Softers', sans-serif;
 }
 
-.button-container {
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+    z-index: 5;
+}
+
+.slides {
     display: flex;
-    position: absolute;
-    gap: 60px;
-    top: 60%;
-    left: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.slide img {
+    width: 100%;
+}
+
+.slider-nav {
+    display: flex;
     justify-content: center;
-    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    margin-top: 15px;
+    z-index: 10;
 }
 
-.portfolio-button, .aboutme-button {
-    background-color: rgba(0, 0, 0, 0.205);
-    color: white; 
-    padding: 10px 20px;
-    font-size: 30px;
-    text-decoration: none;
-    border: 2px solid white;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    white-space: nowrap;
-    cursor: pointer; 
+.nav-line {
+    display: inline-block;
+    width: 60px;
+    height: 6px;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.portfolio-button:hover, .aboutme-button:hover {
-    background-color: rgba(255, 255, 255, 1);
-    color: #000;
+.nav-line.active, .nav-line:hover {
+    background-color: #333;
 }
 
-.portfolio-button.animate {
-    animation: translate 1s ease-in-out; 
-}
-
-@keyframes translate {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-1000px);
-    }
+.text-block {
+    display: block;
+    position: absolute; 
+    margin-top: 10px; 
+    width: 80%; 
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 18px;
+    z-index: 10;
+    opacity: 0.8;
+    border-radius: 5px;
 }
