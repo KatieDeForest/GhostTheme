@@ -4,24 +4,31 @@
 
     </head>
    <div class="image-container">
-    <div class="description-overlay">Detail-focused photography<br>that brings out the beauty in every moment</div>
         <div class="slides">
-            <div class="slide active">
-                <img src="{{asset 'images/image1.jpg'}}" loading="lazy" alt="Slide 1">
+            <div class="slide active" data-order="1">
+                <img src="{{asset 'images/image1.jpg'}}" loading="lazy">
             </div>
-            <div class="slide">
-                <img src="{{asset 'images/image2.jpg'}}" loading="lazy" alt="Slide 2">
+            <div class="slide" data-order="2">
+                <img src="{{asset 'images/image2.jpg'}}" loading="lazy">
             </div>
-            {{!-- <div class="slide">
-                <img src="{{asset 'images/image3.jpg'}}" loading="lazy" alt="Slide 3">
-            </div> --}}
+            <div class="slide" data-order="3">
+                <img src="{{asset 'images/image3.jpg'}}" loading="lazy">
+            </div>
+            <div class="slide" data-order="4">
+                <img src="{{asset 'images/image4.jpg'}}" loading="lazy">
+            </div>
         </div>
         <div class="slider-nav">
             <span class="nav-line active" data-slide="0"></span>
             <span class="nav-line" data-slide="1"></span>
             <span class="nav-line" data-slide="2"></span>
+            <span class="nav-line" data-slide="3"></span>
         </div>
-        <div class="text-block"></div>
+        <div class="text-block">
+            <span class="katie">© Katie De Forest</span>
+            <span class="arrows">Arrow keys to navigate</span>
+        </div>
+        {{!-- <div class="description-overlay">Detail-focused photography<br>that brings out the beauty in every moment</div> --}}
     </div>
 
     <script type="module" src="{{asset 'js/slider.js'}}"></script>
