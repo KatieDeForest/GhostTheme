@@ -36,21 +36,26 @@ navLines.forEach((line, index) => {
 // Add keyboard arrow navigation
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft') {
-        // Navigate to the previous slide
-        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-        showSlide(currentIndex);
+        previousSlide(); // Navigate to the previous slide
     } else if (event.key === 'ArrowRight') {
-        // Navigate to the next slide
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
+        nextSlide(); // Navigate to the next slide
     }
 });
 
+// Add arrow navigation functions
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}
+
+function previousSlide() {
+    currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+    showSlide(currentIndex);
+}
+
+document.querySelector('.left-arrow').addEventListener('click', previousSlide);
+document.querySelector('.right-arrow').addEventListener('click', nextSlide);
+
 // Initialize the slider by showing the first slide
 showSlide(currentIndex);
-
-
-// setInterval(() => {
-//     currentIndex = (currentIndex + 1) % slides.length;
-//     showSlide(currentIndex);
-// }, 3000);

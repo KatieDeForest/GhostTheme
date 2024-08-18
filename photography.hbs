@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     </head>
-   <div class="image-container">
+    <div class="image-container">
         <div class="slides">
             <div class="slide active" data-order="1">
                 <img src="{{asset 'images/image1.jpg'}}" loading="lazy">
@@ -24,11 +24,16 @@
             <span class="nav-line" data-slide="2"></span>
             <span class="nav-line" data-slide="3"></span>
         </div>
-        <div class="text-block">
-            <span class="katie">© Katie De Forest</span>
-            <span class="arrows">Arrow keys to navigate</span>
-        </div>
-        {{!-- <div class="description-overlay">Detail-focused photography<br>that brings out the beauty in every moment</div> --}}
+        {{!-- <div class="description-overlay">Detail-focused photography<br>that brings out the beauty in every moment
+        </div> --}}
+    </div>
+    <div class="text-block">
+        <span class="katie">© Katie De Forest</span>
+        <span class="navigation">Arrow keys to navigate</span>
+    </div>
+    <div class="arrow-container">
+        <div class="arrow left-arrow" onclick="previousSlide()">&#10094;</div>
+        <div class="arrow right-arrow" onclick="nextSlide()">&#10095;</div>
     </div>
 
     <script type="module" src="{{asset 'js/slider.js'}}"></script>
