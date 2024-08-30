@@ -1,4 +1,4 @@
-const slidesContainer = document.querySelector('.slides');
+const slidesContainer = document.querySelector('.slideshow');
 let slides = Array.from(document.querySelectorAll('.slide'));
 const navLines = document.querySelectorAll('.nav-line');
 
