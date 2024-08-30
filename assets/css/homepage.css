@@ -52,6 +52,7 @@ body {
     scale: 90%;
     transition: transform 0.3s ease;
     z-index: 1;
+    object-fit: contain;
 }
 
 .image-container a:hover video, .image-container a:hover img:not(.line) {
@@ -85,7 +86,6 @@ body {
     font-size: 28px;
     font-family: 'Arial', sans-serif;
     text-shadow: 1px 1px 0px #5e5e5e, -1px -1px 0px #5e5e5e, -1px 1px 0px #5e5e5e, 1px -1px 0px #5e5e5e;
-    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 5px;
     padding: 5px;
 }
