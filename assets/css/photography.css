@@ -20,7 +20,7 @@ body {
 
 .photography-header {
     width: 100%;
-    padding: 10px 20px;
+    padding: 26px 20px;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -30,6 +30,7 @@ body {
     align-items: center;
     pointer-events: none;
     box-sizing: border-box;
+    border-bottom: 2px solid #2c2c2c;
 }
 
 .photography-header h1 {
@@ -67,11 +68,11 @@ body {
 .photography-menu ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'Softers', sans-serif;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
-    text-shadow: 4px 4px 4px rgb(180, 180, 180);
+    text-shadow: 4px 4px 4px rgb(150, 150, 150);
 }
 
 .photography-menu ul li a:hover {
@@ -111,9 +112,12 @@ body {
     z-index: 5;
 }
 
-.slides {
+.slideshow {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    margin-top: 3%;
+    height: 100%;
+    width: 100%;
 }
 
 .slide {
@@ -122,9 +126,8 @@ body {
 }
 
 .slide img {
-    width: 100vw;
-    height: 100%;
     justify-content: center;
+    object-fit: contain;
 }
 
 .slider-nav {
@@ -157,7 +160,7 @@ body {
     position: fixed; 
     bottom: 0px; 
     width: 100%; 
-    height: 30px;
+    height: 28px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     font-size: 18px;
@@ -194,10 +197,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color: rgba(14, 14, 14, 0.5);
+    color: rgb(230, 230, 230);
     font-size: 50px;
-    opacity: 0;
+    opacity: 1;
     cursor: pointer;
     transition: opacity 0.3s;
     z-index: 20;
@@ -217,5 +220,6 @@ body {
 }
 
 .arrow:hover {
-    opacity: 1;
+    background-color: rgba(82, 82, 82, 0.5);
+    transition: background-color 0.5s ease;
 }
