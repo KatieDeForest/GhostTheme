@@ -73,11 +73,17 @@ body {
     padding: 5px 10px;
     transition: background-color 0.3s ease;
     text-shadow: 4px 4px 4px rgb(150, 150, 150);
+    border-radius: 15px;
 }
 
 .photography-menu ul li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+}
+
+.photography-menu ul li a#gallery-btn {
+    color: rgb(44, 44, 44);
+    background-color: white;
+    text-shadow: 4px 4px 4px rgb(141, 141, 141);
 }
 
 @font-face {
@@ -85,11 +91,4 @@ body {
     src: url('/assets/fonts/Softers.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-
-.photography-menu ul li a.gallery-btn {
-    color: rgb(44, 44, 44);
-    background-color: white; /* Gallery button background */
-    text-shadow: 4px 4px 4px rgb(141, 141, 141);
-    border-radius: 15px;
 }
