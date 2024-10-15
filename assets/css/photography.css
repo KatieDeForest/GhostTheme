@@ -20,7 +20,7 @@ body {
 
 .photography-header {
     width: 100%;
-    padding: 26px 20px;
+    padding: 25px 20px;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
@@ -76,8 +76,8 @@ body {
 }
 
 .photography-menu ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
 }
 
 @font-face {
