@@ -76,8 +76,14 @@ body {
     border-radius: 15px;
 }
 
-.photography-menu ul li a#btn:hover {
+.photography-menu ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.photography-menu ul li a#start-btn {
+    color: rgb(44, 44, 44);
+    background-color: white;
+    text-shadow: 4px 4px 4px rgb(141, 141, 141);
 }
 
 @font-face {
