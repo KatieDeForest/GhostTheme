@@ -121,8 +121,10 @@ resource "coder_agent" "main" {
     set -e
 
     # Clone repo from GitHub
-    if [ ! -d "/home/coder/GhostTheme" ]
+    if [ ! -d "/home/coder/dev" ]
     then
+        mkdir /home/coder/dev
+        cd /home/coder/dev
         git clone https://github.com/KatieDeForest/GhostTheme.git
     fi
     sudo npm install -g ghost-cli@latest
@@ -258,7 +260,7 @@ resource "kubernetes_pod" "main" {
     }
     container {
       name              = "ghost"
-      image             = "docker.theflyingbirds.net/backstage-dev:latest"
+      image             = "harbor.theflyingbirds.net/backstage-dev:latest"
       image_pull_policy = "Always"
       command           = ["sh", "-c", coder_agent.main.init_script]
       port {
