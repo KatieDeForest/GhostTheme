@@ -1,0 +1,51 @@
+name: Ghost Dev
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.devcontainer/**'
+jobs:
+  build-test-publish:
+    runs-on: ubuntu-latest
+    steps:
+      # Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Get short commit SHA
+        if: github.ref == 'refs/heads/main'
+        id: vars
+        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+      - name: Get latest commit title
+        if: github.ref == 'refs/heads/main'
+        id: message
+        run: echo "pr_title=$(git log --format=%s -n 1 ${{ github.sha }})" >> $GITHUB_OUTPUT
+
+      - name: Setup Terraform
+        uses: ./.github/actions/setup-tf
+
+      - name: Terraform init and validate
+        run: |
+          cd .devcontainer/ghost-dev
+          terraform init -upgrade
+          terraform validate
+          
+      # Step 2: Install the Coder CLI
+      - name: Install Coder CLI
+        run: |
+          curl -L https://coder.com/install.sh | sh
+
+      # Step 3: Set environment variables and push template
+      - name: Push template to Coder
+        env:
+          CODER_URL: ${{ secrets.CODER_URL }}
+          CODER_SESSION_TOKEN: ${{ secrets.CODER_SESSION_TOKEN }}
+        run: |
+          export CODER_TEMPLATE_NAME=Ghost
+          export CODER_TEMPLATE_DIR=.devcontainer/ghost-dev
+          export CODER_TEMPLATE_VERSION=$(git rev-parse --short HEAD)
+
+          coder templates push --yes $CODER_TEMPLATE_NAME \
+              --directory $CODER_TEMPLATE_DIR \
+              --name=$CODER_TEMPLATE_VERSION
