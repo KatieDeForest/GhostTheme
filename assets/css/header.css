@@ -21,18 +21,6 @@
     max-width: 265px;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 50px;
-    margin-right: 10px;
-    cursor: pointer;
-    pointer-events: auto;
-}
-
 .site-header h1 {
     color: #fff;
     font-size: 28px;
