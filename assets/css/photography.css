@@ -5,27 +5,30 @@ body {
     display: flex;
     height: 100%;
     width: 100%;
-    font-family: 'Softers', sans-serif;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    background-color: #5e5e5e; /* Slight gray tone */
-    position: relative; /* Ensure container is positioned relative */
+    background-color: #5e5e5e;
+    position: relative;
 }
 
 .header-container {
-    width: 150px;
+    width: 100%;
+    height: auto;
     display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.664); /* Transparent background */
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.664);
+    justify-content: space-between;
     align-items: center;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5); /* Add shadow to the right */
-    z-index: 1; /* Ensure header is above the background image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    position: relative;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .header-link {
@@ -33,81 +36,60 @@ body {
     color: #ffffff;
     cursor: pointer;
     display: flex;
+    flex-direction: row;
     align-items: center;
     pointer-events: auto;
-    flex-wrap: wrap;
-    flex-direction: column;
 }
 
-.photography-header {
-    padding: 10px;
-    display: grid;
-    grid-template-rows: auto auto;
-    align-items: center;
-    justify-items: center;
-}
-
-.photography-header h1 {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0px 0 0px;
-}
-
-.photography-header h2 {
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: normal;
-    margin: 0 0 0px;
-}
-
-.photography-menu {
-    padding-top: 20px;
-    width: 100%;
+.header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
-.photography-menu ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.photography-menu ul li {
-    margin: 10px 0;
-    padding-bottom: 5px;
-    position: relative; /* Position relative for sub-menu */
-}
-
-.photography-menu ul li a {
+.header-title h1 {
     color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin: 10px 50px 10px;
+}
+
+#photography-menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#photography-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+#photography-menu ul li {
+    margin: 10px;
+}
+
+#photography-menu ul li a {
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
     text-decoration: none;
-    font-size: 18px;
-    padding: 0; /* Remove padding */
-    display: inline; /* Change display to inline */
-    text-align: left; /* Align text to the left */
     transition: color 0.3s ease;
     border-radius: 5px;
 }
 
-.photography-menu ul li a:hover {
+#photography-menu ul li a:hover {
     color: rgb(66, 66, 66);
 }
 
-/* .sub-menu {
-    list-style: none;
-    padding-left: 20px;
-    display: block;
+.photography-leftmenu ul li a,
+.photography-rightmenu ul li a {
+    font-size: 18px;
 }
-
-.sub-menu li {
-    margin: 5px 0;
-}
-
-.sub-menu li a {
-    font-size: 16px !important;
-} */
 
 .background-image {
     position: absolute;
@@ -115,13 +97,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure image covers the container */
-    z-index: 0; /* Ensure background image is behind the header */
-}
-
-@font-face {
-    font-family: 'Softers';
-    src: url('/assets/fonts/Softers.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    object-fit: cover;
+    z-index: 0;
 }

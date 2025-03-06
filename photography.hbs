@@ -6,27 +6,28 @@
 <body>
     <div class="container">
         <div class="header-container">
-            <header class="photography-header">
-                <a href="https://KatieDeForest.com" class="header-link">
-                    <h1>Katie De Forest's</h1>
-                    <h2>Photography</h2>
-                </a>
-            </header>
-            <nav class="photography-menu">
+            <nav class="photography-leftmenu" id="photography-menu">
                 <ul>
                     <li><a href="." class="home-btn">Home</a></li>
                     <li><a href="/photography/pg-gallery" class="gallery-btn">Gallery</a></li>
-                    <li><a href="/photography/pg-services" class="services-btn">Services</a></li>
                     <li><a href="/photography/pg-contact" class="contact-btn">Contact</a></li>
                     <li><a href="/photography/pg-about" class="about-btn">About</a></li>
                 </ul>
             </nav>
+
+            <header class="header-title">
+                <a href="https://KatieDeForest.com" class="header-link">
+                    <h1>Katie De Forest</h1>
+                </a>
+            </header>
+
+            <nav class="photography-rightmenu" id="photography-menu">
+                <ul>
+                    <!-- Add any additional menu items here if needed -->
+                </ul>
+            </nav>
         </div>
-        <div class="photo-gallery">
-            <div class="image-container">
-                <img src="{{asset 'images/image1.jpg'}}" alt="Background Image" class="background-image">
-            </div>
-        </div>
+        <img src="{{asset 'images/image1.jpg'}}" alt="Background Image" class="background-image">
     </div>
-    <script type="module" src="{{asset 'js/slider.js'}}"></script>
 </body>
+</html>
