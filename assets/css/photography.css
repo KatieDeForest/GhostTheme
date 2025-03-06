@@ -12,7 +12,7 @@ body {
 }
 
 /* Header Section */
-.header {
+.header-name {
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -66,7 +66,7 @@ p {
 }
 
 /* Navigation */
-.nav {
+.header-navmenu {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -78,7 +78,7 @@ p {
     letter-spacing: 1px;
 }
 
-.nav a {
+.header-navmenu a {
     color: white;
     text-decoration: none;
     margin: 0 15px;

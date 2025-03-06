@@ -1,36 +1,38 @@
-{{!< default}} <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{asset 'css/photography.css'}}">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Privately - Fine Art Photography</title>
+{{!< default}} <head>
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/photography.css'}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">Katie De Forest</div>
-            <div>
-                <a href="#">Collections</a>
-                <a href="#">Books</a>
-                <a href="#">Initiatives</a>
-                <a href="#">Artist</a>
-            </div>
-            <div class="social-icons">
-                <a href="#">📷</a>
-                <a href="#">🔗</a>
-            </div>
-        </nav>
-    </header>
 
     <body>
-        <div class="background-image">
-            <img src="{{asset 'images/image1.jpg'}}" alt="background-image">
-        </div>
-        <div class="content">
-            <h1>Privately</h1>
-            <p>New fine art photography collection</p>
-            <a href="#" class="btn">View Collection</a>
+        <div class="container">
+            <div class="header-container">
+                <header class="header-name">
+                    <a href="https://KatieDeForest.com" class="header-link">
+                        <h1>Katie De Forest</h1>
+                    </a>
+                </header>
+                <nav class="header-navmenu">
+                    <ul>
+                        <a href="." class="home-btn">Home</a>
+                        <a href="/photography/pg-gallery" class="gallery-btn">Gallery</a>
+                        <a href="/photography/pg-services" class="services-btn">Services</a>
+                        <a href="/photography/pg-contact" class="contact-btn">Contact</a>
+                        <a href="/photography/pg-about" class="about-btn">About</a>
+                    </ul>
+                    <div class="social-icons">
+                        <a href="#">📷</a>
+                        <a href="#">🔗</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="background-image">
+                <img src="{{asset 'images/image1.jpg'}}" alt="background-image">
+            </div>
+            <div class="content">
+                <h1></h1>
+                <p>New fine art photography collection</p>
+                <a href="#" class="btn">View Collection</a>
+            </div>
         </div>
     </body>
 
