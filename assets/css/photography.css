@@ -81,7 +81,7 @@ p {
 }
 
 /* Navigation */
-.nav-container {
+.nav-links {
     width: 33%;
     flex: 1 1 33%;
 }
@@ -106,12 +106,12 @@ p {
     max-width: 100%;
 }
 
-.nav-links {
-    /* display: flex;
-    margin-right: auto; */
-}
+/* .nav-wrapper {
+    display: flex;
+    margin-right: auto;
+} */
 
-.nav-container a {
+.nav-links a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
@@ -119,12 +119,12 @@ p {
 }
 
 /* Logo */
-.logo {
-    /* font-family: 'Playfair Display', serif;
+/* .logo {
+    font-family: 'Playfair Display', serif;
     font-size: var(--logo-font-size);
     font-weight: bold;
-    align-items: center; */
-}
+    align-items: center;
+} */
 
 /* Social Icons */
 .social-icons {
