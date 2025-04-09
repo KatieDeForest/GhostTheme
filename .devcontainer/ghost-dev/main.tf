@@ -375,11 +375,3 @@ resource "kubernetes_pod" "main" {
 #       # }
 #     }
 
-#     # volume {
-#     #   name = "database-init"
-#     #   config_map {
-#     #     name = kubernetes_config_map.database_init.metadata[0].name
-#     #   }
-#     # }
-#   }
-# }
