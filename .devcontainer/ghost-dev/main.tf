@@ -251,7 +251,7 @@ resource "kubernetes_pod" "main" {
     }
     container {
       name              = "ghost"
-      image             = "docker.theflyingbirds.net/backstage-dev:latest"
+      image             = "harbor.theflyingbirds.net/tfb-services/backstage-dev:latest"
       image_pull_policy = "Always"
       command           = ["sh", "-c", coder_agent.main.init_script]
       port {
