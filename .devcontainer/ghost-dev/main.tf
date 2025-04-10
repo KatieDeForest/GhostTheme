@@ -266,8 +266,8 @@ resource "kubernetes_pod" "main" {
       }
       resources {
         requests = {
-          "cpu"    = "250m"
-          "memory" = "512Mi"
+          "cpu"    = "${data.coder_parameter.cpu.value}"
+          "memory" = "${data.coder_parameter.memory.value}Gi"
         }
         limits = {
           "cpu"    = "${data.coder_parameter.cpu.value}"
